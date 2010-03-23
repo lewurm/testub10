@@ -1,0 +1,33 @@
+Dies ist eine gemeinschaftliche Sammlung von Testfaellen fuer die Uebungsbeispiele
+der LVA "Uebersetzerbau (SS10)".
+
+kurzes HOWTO:
+$ git clone $URL ~/test
+
+danach koennen die Testfaelle durch diesen Befehl aktualisiert werden:
+$ cd ~/test && git pull
+
+Das Testskript selbst wird von der LVA-Leitung zur Verfuegung gestellt:
+$ /usr/ftp/pub/ubvl/test/scanner/test
+$ /usr/ftp/pub/ubvl/test/parser/test
+$ /usr/ftp/pub/ubvl/test/ag/test
+
+
+Namenskonventionen fuer das Skript:
+Die Dateien mit der Eingabe heissen *.0, *.1, *.2 oder *.3, wobei die
+Ziffer hinten den Exit-Code angibt. Eine Datei, die einen
+Syntax-Fehler enthaelt, werden Sie also z.B. foo.2 nennen.  Beim
+Scanner-Beispiel gibt es fuer akzeptable Eingaben (also Dateien, die
+auf .0 enden) auch noch eine Ausgabe, die ueberprueft werden muss; die
+erwartete Ausgabe fuer die Datei bar.0 nennen Sie bar.out.
+
+Namenskonventionen fuer uns:
+Jeder Testfall wird hat als Praefix "<nick>_", sodass keine Namenskonflikte enstehen.
+
+
+Wie kannst du beitragen?
+* forke das Repository auf github, committe deine Aenderungen und mach einen pull request
+* klone das Repository, committe deine Aenderungen, erzeuge patches mit git format-patch und maile sie 
+* schicke deine Testfaelle per mail (mit passenden Dateinamen bitte!)
+* poste deine Testfaelle und haenge sie als Attachment an (mit passenden Dateinamen bitte!)
+
