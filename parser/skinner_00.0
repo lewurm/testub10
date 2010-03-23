@@ -1,0 +1,11 @@
+method blabb
+var foo := 5;
+if foo < 0x0F3 then
+	/* hier
+		kommt komm
+	mentar
+	*/
+	foo := foo - 0x3;
+else
+	foo := foo * 4;
+end

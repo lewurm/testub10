@@ -1,0 +1,26 @@
+method
+ident blabb
+var
+ident foo
+:=
+num 5
+;
+if
+ident foo
+<
+num f3
+then
+ident foo
+:=
+ident foo
+-
+num 3
+;
+else
+ident foo
+:=
+ident foo
+*
+num f4
+;
+end
