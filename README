@@ -26,8 +26,15 @@ Jeder Testfall wird hat als Praefix "<nick>_", sodass keine Namenskonflikte enst
 
 
 Wie kannst du beitragen?
+mit git:
 * forke das Repository auf github, committe deine Aenderungen und mach einen "Pull Request"
-* clone das Repository, committe deine Aenderungen, erzeuge Patches mit "git format-patch" und maile sie an lewurm_AT_gmail_DOT_com
-* schicke deine Testfaelle als Anhnag per Mail (mit passenden Dateinamen bitte!) an lewurm_AT_gmail_DOT_com
+* clone das Repository, committe deine Aenderungen, erzeuge Patches mit "git format-patch" und maile sie oder poste sie im Informatikforum
+
+ohne git:
+* schicke deine Testfaelle als Anhang per Mail (mit passenden Dateinamen bitte!)
 * poste deine Testfaelle im Informatikforum und haenge sie als Attachment an (mit passenden Dateinamen bitte!)
 
+und natuerlich ist jeder herzlichst dazu eingeladen im Forum ueber Testfaelle zu diskutieren :)
+
+Infforum-Thread: http://tinyurl.com/testub10
+Mailadresse(n): lewurm_AT_gmail_DOT_com (weitere Freiwillig sind willkommen, einfach eintragen)
