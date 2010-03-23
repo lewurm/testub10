@@ -1,0 +1,33 @@
+if
+num 31
+<
+num 1e
+then
+do
+ident my_var1
+-
+num 40
+end
+ident if39
+num 27
+if
+ident twen
+:=
+num 20
+ident zero
+=
+num 0
+ident twen
+-
+num 4a
+struct
+ident foobar
+.
+num b10
+(
+*
+num 2a
+)
+method
+ident test
+ident hihi
