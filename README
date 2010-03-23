@@ -1,10 +1,10 @@
 Dies ist eine gemeinschaftliche Sammlung von Testfaellen fuer die Uebungsbeispiele
 der LVA "Uebersetzerbau (SS10)".
 
-kurzes HOWTO:
-$ git clone $URL ~/test
+Kurzes HOWTO:
+$ git clone git://github.com/lewurm/testub10.git ~/test
 
-danach koennen die Testfaelle durch diesen Befehl aktualisiert werden:
+Danach koennen die Testfaelle durch diesen Befehl aktualisiert werden:
 $ cd ~/test && git pull
 
 Das Testskript selbst wird von der LVA-Leitung zur Verfuegung gestellt:
@@ -26,8 +26,8 @@ Jeder Testfall wird hat als Praefix "<nick>_", sodass keine Namenskonflikte enst
 
 
 Wie kannst du beitragen?
-* forke das Repository auf github, committe deine Aenderungen und mach einen pull request
-* klone das Repository, committe deine Aenderungen, erzeuge patches mit git format-patch und maile sie 
-* schicke deine Testfaelle per mail (mit passenden Dateinamen bitte!)
-* poste deine Testfaelle und haenge sie als Attachment an (mit passenden Dateinamen bitte!)
+* forke das Repository auf github, committe deine Aenderungen und mach einen "Pull Request"
+* clone das Repository, committe deine Aenderungen, erzeuge Patches mit "git format-patch" und maile sie an lewurm_AT_gmail_DOT_com
+* schicke deine Testfaelle als Anhnag per Mail (mit passenden Dateinamen bitte!) an lewurm_AT_gmail_DOT_com
+* poste deine Testfaelle im Informatikforum und haenge sie als Attachment an (mit passenden Dateinamen bitte!)
 
