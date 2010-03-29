@@ -1,0 +1,40 @@
+method TForm1.FindString()
+var hFile;
+
+struct
+    pIniData;
+    pData;
+end;
+
+  /* Initalize Data */
+  hMapping  := _INVALID_HANDLE_VALUE;
+  pIniData     := 0x13;
+
+  result := 1;
+
+
+      /* Search File in Workspace... */
+      filename := abc;
+      if FileExists(aSearchFile) then
+        filename := aSearchFile;
+      else
+        return;
+      end;
+
+      /* CreateFileHandle... */
+      this.hFile := 10 % pIniData;
+
+
+
+      if hFile < INVALID_HANDLE_VALUE then
+	return 0x2345;
+      
+      if hFile = INVALID_HANDLE_VALUE then
+	return 23456;
+
+
+      while not result or pIniData = 0x12 do
+
+	pIniData := pIniData + 1;
+      end;
+end;
