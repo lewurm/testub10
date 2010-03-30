@@ -1,0 +1,5 @@
+struct a end;
+method f(b c s)
+	/* lesender feldzugriff */
+	var b := c*(s.a - 1);
+end;
