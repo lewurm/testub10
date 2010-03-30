@@ -1,0 +1,9 @@
+struct a d end;
+method f(b c s)
+	var t := 0;
+	/* lesender feldzugriff */
+	b := c*(s.a - 1);
+	b := c*(s.d - 1);
+	b := c*(t.a - 1);
+	b := c*(t.d - 1);
+end;

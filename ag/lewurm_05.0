@@ -1,0 +1,10 @@
+struct a c d end;
+method f(b c s)
+	var t := 0;
+	/* lesender feldzugriff */
+	b := c*(s.a - 1);
+	b := c*(s.d - 1);
+	b := c*(t.a - 1);
+	/* auch gueltig, da structs und vars unterschiedlichen scope haben */
+	b := c*(t.c - 1);
+end;
