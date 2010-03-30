@@ -1,7 +1,7 @@
 Dies ist eine gemeinschaftliche Sammlung von Testfaellen fuer die Uebungsbeispiele
 der LVA "Uebersetzerbau (SS10)".
 
-Kurzes HOWTO:
+Kurzes HOWTO (fuer die g0):
 $ git clone git://github.com/lewurm/testub10.git ~/test
 
 Danach koennen die Testfaelle durch diesen Befehl aktualisiert werden:
@@ -22,7 +22,7 @@ auf .0 enden) auch noch eine Ausgabe, die ueberprueft werden muss; die
 erwartete Ausgabe fuer die Datei bar.0 nennen Sie bar.out.
 
 Namenskonventionen fuer uns:
-Jeder Testfall wird hat als Praefix "<nick>_", sodass keine Namenskonflikte enstehen.
+Jeder Testfall hat als Praefix "<nick>_", sodass keine Namenskonflikte entstehen.
 
 
 Wie kannst du beitragen?
