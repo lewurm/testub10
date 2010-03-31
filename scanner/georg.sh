@@ -28,7 +28,7 @@ cat > /dev/null << EOF
 7	$(echo -ne ' if0x1'	| xxd -ps)
 EOF
 
-make -C $DIR/ test
+/usr/ftp/pub/ublu/test/scanner/test 2>&1
 
 ## Georg Schiesser <e0307201/AT/student.tuwien.ac.at> @ UBVL 2010S # GPLv2
 ## vim: filetype=sh shiftwidth=8 tabstop=8 noexpandtab nopaste:
