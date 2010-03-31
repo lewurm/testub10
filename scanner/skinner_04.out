@@ -1,0 +1,80 @@
+struct
+ident ba
+end
+;
+method
+ident foo
+(
+ident bar
+ident barfoo
+)
+if
+num 2a
+or
+num 539
+then
+var
+ident bit
+:=
+not
+num 0
+;
+else
+var
+ident bit
+:=
+num 0
+;
+end
+;
+end
+;
+struct
+ident blubb
+ident blibb
+ident blabb
+end
+;
+method
+ident bla
+(
+)
+var
+ident drupdidup
+:=
+num 0
+;
+if
+ident fad
+or
+ident lol
+then
+var
+ident muhahahahaha
+:=
+ident zood
+;
+else
+var
+ident muhahahahaha
+:=
+ident gaehn
+;
+ident drupdiup
+:=
+ident gaehn
+;
+not
+ident drupdidup
+;
+end
+;
+ident blubb
+.
+ident blibb
+(
+ident foo
+)
+;
+end
+;

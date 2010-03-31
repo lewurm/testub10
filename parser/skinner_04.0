@@ -1,0 +1,23 @@
+struct ba end;
+
+method foo ( bar barfoo )
+	if 42 or 1337 then
+		var bit := not 0;
+	else
+		var bit := 0;
+	end;
+end;
+
+struct blubb blibb blabb end;
+
+method bla ()
+	var drupdidup := 0;
+	if fad or lol then
+		var muhahahahaha := zood;
+	else
+		var muhahahahaha := gaehn;
+		drupdiup := gaehn;
+		not drupdidup;
+	end;
+	blubb.blibb (foo);
+end; 
