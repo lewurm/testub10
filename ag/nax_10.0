@@ -1,0 +1,10 @@
+method test_nested_ifs(arg1 arg2)
+    if arg1 = arg2 then
+        var a := 1;
+    end;
+
+    if not (arg1 = arg2) then
+        var a := 2;
+        var b := a - -1;
+    end;
+end;

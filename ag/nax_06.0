@@ -1,0 +1,25 @@
+struct person
+    first_name
+    last_name
+end;
+
+method doit(person)
+    person.print_names(person.first_name, person.last_name,);
+end;
+
+method print_names(arg1 arg2)
+    if arg1 = arg2 then
+        this.print(arg1);
+        return 1;
+    end;
+    this.print(arg1);
+    this.print(arg2);
+    var a := 0;
+    a := (1 - 0x3).to_f();
+
+    if 1 then
+        print(a);
+    else
+        print(0); /* never reached */
+    end;
+end;

@@ -1,0 +1,21 @@
+struct 
+    dots per line should be allowed some other 
+end;
+
+method doit(a b)
+    while a < b do
+        var something := 0x42;
+        var many := 0x42;
+        var and := 0x42;
+        while a = b do
+            the_end();
+        end;
+        if something then
+            doit();
+        else if not something then end;
+        end;
+
+        many.dots.per.line.should.be.allowed := and.some.other.dots;
+
+    end;
+end;

@@ -1,0 +1,15 @@
+struct mystruct
+    field1
+    field2
+    field3
+end;
+method doit()
+    var a := 10000;
+    var b := 0x42;
+
+    return a - (b * 100);
+end;
+
+method tester(arg)
+    doit();
+end;

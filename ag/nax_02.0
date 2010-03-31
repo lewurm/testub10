@@ -1,0 +1,8 @@
+method with_args2(arg1 arg2)
+    var a := 0;
+    doit();
+    another_stmt();
+    a;
+    something();
+    something_other(arg1,);
+end;
