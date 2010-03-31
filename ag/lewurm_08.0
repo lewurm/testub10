@@ -1,0 +1,6 @@
+struct x y end;
+method f()
+	/* erlaubt, da 'x' als 'this.x' zu lesen ist */
+    var n := x;
+    return n;
+end;
