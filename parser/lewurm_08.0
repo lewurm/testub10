@@ -1,0 +1,16 @@
+method f (a b)
+	a := b - 1;	
+end;
+
+method g (a)
+	a := a - 1;
+end;
+
+method main ()
+	var x := 0;
+	/* vgl.:
+ 	 * [Term ’.’] ident ’(’ { Expr ’,’ } [ Expr ] ’)’ /* Methodenaufruf */
+	f (x,x,);
+	g (x,);
+	g (x);
+end;
