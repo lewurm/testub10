@@ -1,0 +1,34 @@
+/*
+ * Ist recht nuetzlich um den Aufbau der Liste zu veranschaulichen.
+ */
+struct
+	one two
+end;
+
+method bar(three four)
+	var five := 5;
+	var six := 6;
+	
+	if(4 = 2) then
+		var seven := 1;
+		var eight := 0;
+	else
+		var nine := 0x1f;
+	end;
+
+	var ten := 10;
+
+	if(9 < 8) then
+		var eleven := 12;
+	else
+		var twelve := 2;
+	end;
+
+
+	return six;
+end;
+
+struct
+	thriteen
+	fourteen
+end;
