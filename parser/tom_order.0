@@ -1,0 +1,5 @@
+method a(b)
+ return b;
+end;
+
+struct c d e end;

@@ -1,0 +1,19 @@
+/* all - teste alle ableitungen */
+struct
+a
+end;
+
+method b(c d)
+  var e := 0;
+  c := e;
+  d = e;
+  if (e = d) then c := 1-2; end;
+  if (e < d) then c := 1 or 2 or 3; else c := c * d * e; end;
+  while (not d) do
+     d := d.c - d -d - d;
+     d.c := c.d - d.c;
+     b (d, c);
+     b.b (c, d);
+  end;
+  return c = d;
+end;

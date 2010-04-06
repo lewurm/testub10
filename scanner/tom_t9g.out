@@ -1,0 +1,26 @@
+struct
+;
+end
+(
+method
+)
+var
+:=
+if
+.
+then
+-
+else
+*
+while
+<
+do
+=
+return
+,
+not
+or
+this
+ident STRUCT
+ident EnD
+ident mEthod
