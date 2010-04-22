@@ -1,0 +1,4 @@
+method x()
+  x:=x();
+end;
+

@@ -1,0 +1,4 @@
+method x()
+  this.x := not (x - (x*x) - -5 - 3 - this - x - (x-5).x - 
+             (not this).x(x or this, ((x))));
+end;

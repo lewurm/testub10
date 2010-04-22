@@ -1,0 +1,3 @@
+method x()
+  if x then x:=x; end;
+end;

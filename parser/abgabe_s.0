@@ -1,0 +1,3 @@
+method x()
+  x:=x or x or x or x;
+end;

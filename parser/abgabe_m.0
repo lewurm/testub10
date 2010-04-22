@@ -1,0 +1,11 @@
+method x()
+  if x then
+    if x then
+    else
+      if x then
+      else
+        x:=x;
+      end;
+    end;
+  end;
+end;

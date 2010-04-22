@@ -1,0 +1,7 @@
+method x()
+  while x do
+    while x do
+      var x:=x;
+    end;
+  end;
+end;

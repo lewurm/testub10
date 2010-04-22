@@ -1,0 +1,4 @@
+method x()
+  while x do
+  end;
+end;
