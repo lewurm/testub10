@@ -1,0 +1,5 @@
+/* variable and field can have the same name */
+struct a b end;
+method foobar(a)
+	var b := 23;
+end;

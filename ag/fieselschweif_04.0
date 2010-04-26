@@ -1,0 +1,5 @@
+struct derhansderkanns end;
+method justeat(it)
+	/* LHS -> variable, RHS -> field; so there's no collision */
+	var derhansderkanns := derhansderkanns;
+end;
