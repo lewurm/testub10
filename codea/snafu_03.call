@@ -1,0 +1,3 @@
+long Long(long this, long, long, long, long, long);
+
+RET( Long(0xDEAD, 23, 66, 1024, 9999999, 65535) == 9935366 );
