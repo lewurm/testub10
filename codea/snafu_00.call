@@ -1,0 +1,5 @@
+extern long foo(long this, long, long, long);
+extern long bar(long this, long, long, long);
+extern long foobar(long this, long, long, long);
+
+RET( (foo(0xDEAD, 3, 4, 5) == 3) && (bar(0xDEAD, 3, 4, 5) == 4) && (foobar(0xDEAD, 3, 4, 5) == 5));

@@ -1,0 +1,7 @@
+method q(x y)
+	return 5 - ((x - 3) - y);
+end;
+
+method r(x y)
+	return (x - y) - 10;
+end;
