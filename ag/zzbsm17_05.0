@@ -1,0 +1,6 @@
+struct f1 end;
+
+method foo ()
+    var f1 := 1;
+end;
+    

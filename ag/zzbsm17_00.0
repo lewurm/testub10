@@ -1,0 +1,33 @@
+struct f1 end; /* Felddefinition */
+
+method foo ( p1 p2 ) /* Methodendefinition, Parameterdefinition */
+
+    p1 := 1; /* Zuweisung */
+
+    var v1 := 1; /* Variablendefinition */
+
+    1; /* Ausdrucksanweisung */
+    not 1; /* Dito */
+
+    if p1 < p2 then /* If-Anweisung ohne Else-Zweig */
+        v1 := 2;
+    end;
+
+    if p1 < p2 then /* If-Anweisung mit Else-Zweig */
+        var v2 := 2;
+    else
+        v1 := p1;
+    end;
+
+    while (((((1 or 1 or 1 or 1 or 1 or 1))))) do (((((1))))).f1; end; /* While-Anweisung, lesender Feldzugriff */
+
+    var v2 := 5; /* Hier wieder erlaubt, war nur in if reserviert */
+    v2 := v1; /* lesender/schreibender Variablen/Feldzugriff */
+    f1 := f1; /* Dito */
+
+    v2(-500, 500, ); /* What a call */
+    v2(-500, 500, ).f1(-500,500); /* What another call */
+
+    return p1; /* Parameter sind in der ganzen Methode sichtbar */
+end;
+
