@@ -1,0 +1,4 @@
+long g(long, long, long);
+
+RET(g(0, -2, -2) == 1);
+RET(g(0, 1, 3) == 0);

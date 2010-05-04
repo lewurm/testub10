@@ -1,0 +1,3 @@
+method f(a b c)
+	return ((a or 2) or (b or c)) - 10;
+end;

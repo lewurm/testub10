@@ -1,0 +1,3 @@
+method g(a b)
+       return a = b;
+end;

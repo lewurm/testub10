@@ -1,0 +1,3 @@
+method f(a)
+	return (a*a) * (2-3)  * this * (3 * (2-3));
+end;
