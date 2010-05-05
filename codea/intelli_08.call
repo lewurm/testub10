@@ -1,0 +1,8 @@
+extern long long f(long long*, long long*);
+
+long long ar[10];
+int i = 1;
+for(; i <= 10; i++)
+	ar[i-1] = i;
+
+RET(f(ar, ar) == -2);

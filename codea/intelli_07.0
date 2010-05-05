@@ -1,0 +1,5 @@
+struct x y z end;
+
+method f(a)
+       return (a - (-3*8)).y;
+end;
