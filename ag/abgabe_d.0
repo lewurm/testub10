@@ -1,0 +1,7 @@
+method m()
+  if this then
+    var x:=this;
+    var y:=x;
+    return x-y;
+  end;
+end;

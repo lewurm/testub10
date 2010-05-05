@@ -1,0 +1,9 @@
+struct
+  a
+  b
+  c
+end;
+
+method m()
+  return c;
+end;

@@ -1,0 +1,12 @@
+struct
+  a
+  b
+  c
+end;
+
+method m(a)
+  if c then
+    var b:=a;
+    c:=a;
+  end;
+end;

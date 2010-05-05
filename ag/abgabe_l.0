@@ -1,0 +1,9 @@
+struct
+  a
+end;
+
+method m()
+  a.a := 0;
+  var a:=a;
+  a.a := this;
+end;

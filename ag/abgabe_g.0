@@ -1,0 +1,8 @@
+struct
+  a
+  b
+end;
+
+method m()
+  return this.a;
+end;

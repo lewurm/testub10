@@ -1,0 +1,13 @@
+struct
+  a
+  b
+end;
+
+struct
+  c
+  d
+end;
+
+method m()
+  this.b.c := 5;
+end;

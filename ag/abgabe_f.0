@@ -1,0 +1,8 @@
+method m()
+  while n() do
+    var x:=this;
+    o(x);
+  end;
+  var x:=3;
+  return x;
+end;

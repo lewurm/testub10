@@ -1,0 +1,9 @@
+method m()
+  if this then
+    var x:=5;
+    return x;
+  else
+    var x:=this;
+    x;
+  end;
+end;
