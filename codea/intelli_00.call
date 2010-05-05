@@ -1,9 +1,4 @@
 long f(long, long, long, long);
 long g(long, long, long);
 
-
-
-
-RET(f(1, 100, 10, 5) == 449);
-
-RET(g(5, -2, 7) == 51);
+RET(f(1, 100, 10, 5)==449 && g(5, -2, 7) == 51);
