@@ -3,6 +3,6 @@ method f(a b c)
 end;
 
 /*verschachtelte mult*/
-method g(a b c d)
-       return ((a * (b * (c * (-4)))) - d);
+method g(a b)
+       return (a * (b * (-4))) - this;
 end;
