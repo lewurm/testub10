@@ -1,0 +1,23 @@
+original README by viper:
+http://www.informatik-forum.at/showthread.php?73238-code-benchmarks
+=================================
+The Mysterious Mr. Ubvl presents:
+
+a test case instruction counter
+
+Run:
+
+./test.sh <assignment>
+
+e.g. ./test.sh codea
+
+and all available tests will be benchmarked. The individual traces per test
+case (containing only instructions near the generated code's labels) are
+written to traces/, traces/result.txt contains the aggregated results.
+
+Use something like
+  
+  sort results.txt > r$USER.txt
+  diff r<u...>.txt r<u...>.txt
+
+to compare results with your colleagues.

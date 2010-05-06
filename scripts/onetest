@@ -1,0 +1,115 @@
+#!/bin/bash
+
+i=$1
+beispiel=codea
+PROGRAM=./$beispiel
+
+#LOC=.
+LOC=/usr/ftp/pub/ubvl/test/$beispiel
+
+allow_null_glob_expansion=1
+
+if [ ! -d ~/abgabe/$beispiel ]; then
+  echo "Fehler: Verzeichnis ~/abgabe/$beispiel existiert nicht."
+  exit 1
+else
+  cd ~/abgabe/$beispiel
+  echo 'Teste "make"'
+  make
+fi
+
+if test ! -x $PROGRAM
+then
+	echo "Fehler: Kein Programm $PROGRAM"
+	exit 1
+fi
+let prgnum=0
+#for i in $LOC/*.0 $LOC2/*.0
+if [ -f $i ]; then
+	let prgnum=prgnum+1
+	let errorfound=0
+	echo "==========> Eingabe von $i:"
+	cat $i
+	echo
+	RESFILE=test${beispiel}out$$
+	$PROGRAM <$i >$RESFILE
+	retval=$?
+	echo -n "Übersetzung: "
+	if test $retval -eq 0
+	then
+		echo "Status korrekt"
+	else
+		echo "[Errot] Status=$retval. Erwartet: 0"
+		let errorfound=1
+	fi
+	echo
+	echo "Ausgabe:"
+	if [ -f ~/test/scripts/clr.py ]; then
+		cat $RESFILE | ~/test/scripts/clr.py
+	else
+		cat $RESFILE
+	fi
+	mv -f $RESFILE $RESFILE.s
+	CALLFILE=${i%.*}.call
+	echo
+	if [ ! -f $CALLFILE ]; then
+	echo "Fehler: Datei $CALLFILE existiert nicht, kann Code nicht ausführen..."
+	exit 1
+	else
+	echo "Übersetze und linke das Testprogramm:"
+	if cc -g -I. -DCALL=\"$CALLFILE\" $LOC/testmain.c $LOC/callingconvention.o $RESFILE.s; then
+		echo
+		echo "Rufe folgendes Codefragment auf:"
+		cat $CALLFILE
+		echo
+		./a.out 
+		retval=$?
+		# test callee saved registers
+		if [ "$retval" -ge 12 ] && [ "$retval" -le 15 ]; then
+		echo "[Error] Callee-saved register %r$retval modified."
+					let errorfound=1
+		elif [ "$retval" -eq 11 ]; then
+		echo "[Error] Callee-saved register %rbx modified."
+					let errorfound=1
+		elif [ "$retval" -eq 16 ]; then
+		echo "[Error] Callee-saved register %rbp modified."
+					let errorfound=1
+		elif [ "$retval" -eq 30 ]; then
+		echo "[Error] Stack pointer %rsp modified."
+					let errorfound=1
+				else
+					# test signals  
+		test $retval -gt 127
+		retsig=$?
+		test ${i##*.} = xin
+		expsig=$?
+		if test $retsig -eq $expsig; then
+			if test $retval -eq 1; then
+			echo "[Error] Das Ergebnis des Aufrufs ist falsch."
+			let errorfound=1
+			elif test $retval -eq 0; then
+			echo "Das Ergebnis des Ausdrucks ist korrekt."
+			else
+				echo "[Error] Erzeugter Code verhaelt sich bzgl. Signalerzeugung anders als erwartet."
+			let errorfound=1
+			fi
+		else
+			echo "[Error] Erzeugter Code verhaelt sich bezueglich Signalerzeugung anders als erwartet."
+			let errorfound=1
+			echo "Rueckgabewert = $retval";
+		fi
+		fi
+		echo
+	else
+		echo "[Error] Erzeugter Code konnte nicht assembliert und gelinkt werden."
+		let errorfound=1
+	fi
+	fi
+	let errnum=errnum+errorfound
+	if [ 1 -eq $errorfound ]; then
+		rm *.s
+		rm *.out
+		exit 3;
+	fi
+	rm -f a.out $RESFILE $RESFILE.s
+fi
