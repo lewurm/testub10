@@ -5,3 +5,7 @@ end;
 method r(x y)
 	return (x - y) - 10;
 end;
+
+method s(x y)
+	return 6 - (x - 1);
+end;

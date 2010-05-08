@@ -1,4 +1,5 @@
 extern long q(long this, long, long);
 extern long r(long this, long, long);
+extern long s(long this, long, long);
 
-RET((q(0xDEAD, 33, 15) == -10) && (r(0xDEAD, 33, 15) == 8));
+RET((q(0xDEAD, 33, 15) == -10) && (r(0xDEAD, 33, 15) == 8) && (s(0xDEAD, 33, 15) == -26));

@@ -1,0 +1,13 @@
+struct foo bar beef end;
+
+method foobar()
+	return foo.beef;
+end;
+
+method foobar2()
+	return this.bar;
+end;
+
+method foobar3()
+	return (233 - 31).beef;
+end;

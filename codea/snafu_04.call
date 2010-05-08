@@ -1,0 +1,14 @@
+long foobar(long);
+long foobar2(long);
+long foobar3(long);
+
+long tmp[] = {1111, 2222, 3333};
+/*
+asm(	"\tpush	%%rax\n"
+	"\tmovq	$42, %%rax\n"
+	"\tmovq	%%rax, 218\n"
+	"\tpop	%%rax\n" :: );
+*/
+RET((foobar((long) tmp) == tmp[2]) 
+	&& (foobar2((long) tmp) == tmp[1])); 
+	//&& (foobar3(0xDEAD) == 42));
