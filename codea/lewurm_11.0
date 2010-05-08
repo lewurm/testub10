@@ -1,0 +1,5 @@
+struct a b c end;
+method w()
+	/* passt die addresse jedes mal? */
+	return 0x600b10.c;
+end;
