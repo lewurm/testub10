@@ -1,4 +1,6 @@
-long w(long);
-static long s[] = {5,1,1337};
-printf("addr of s: %0p\n", s);
-RET(w(0xcafebabe) == 1337);
+long wfoo(long);
+static long s[3];
+s[0] = 5;
+s[1] = 1;
+s[2] = 1337;
+RET(wfoo(0xcafebabe) == 1337);

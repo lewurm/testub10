@@ -1,5 +1,5 @@
 struct a b c end;
-method w()
+method wfoo()
 	/* passt die addresse jedes mal? */
-	return 0x600b10.c;
+	return 0x600ac0.c;
 end;
