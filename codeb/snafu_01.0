@@ -1,0 +1,16 @@
+method q(x y)
+	var foo := 42;
+	return 5 - ((x - 3) - y);
+end;
+
+method r(x y)
+	var bar := x*y;
+	return (x - y) - 10;
+end;
+
+struct goo gaa gee end;
+
+method s(x y)
+	var foobar := (x.gaa * y.goo) - ((2*x) - y).gee;
+	return (x - 1);
+end;

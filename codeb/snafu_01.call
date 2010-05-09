@@ -1,0 +1,7 @@
+extern long q(long this, long, long);
+extern long r(long this, long, long);
+extern long s(long this, long, long);
+
+long ar[] = {111, 222, 333};
+
+RET((q(0xDEAD, 33, 15) == -10) && (r(0xDEAD, 33, 15) == 8) && (s(0xDEAD, ar, ar) == ((long) ar - 1)));
