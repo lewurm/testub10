@@ -1,0 +1,7 @@
+long pvs1(long, long, long);
+long pvs2(long, long, long);
+long pvs3(long, long, long);
+long pvs4(long, long, long);
+
+
+RET((pvs1(2,3,5) == -5) && (pvs2(2,3,5) == -13) && (pvs3(2,3,5) == 1) && (pvs4(2,3,5) == -4));
