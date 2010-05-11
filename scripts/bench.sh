@@ -48,12 +48,6 @@ for i in $TEST/*.0; do
     # create executable
     gcc -DCALL=\"${i%.0}.call\" -o $TMPNAME $TMPNAME.s $TESTMAIN $CALLCONV
     
-    # count instructions
-    $DUMPINSTR $TMPNAME call >/dev/null
-    if [ $? != 0 ]; then
-	echo "$bi FEHLGESCHLAGEN"
-	continue
-    fi
     
     # extract the exported symbols from the .s file
     #LABEL=`grep '.globl' $TMPNAME.s | sed 's/^.*\\.globl *\\([a-zA-Z0-9_]\\+\\).*$/\1/g'`
@@ -61,9 +55,16 @@ for i in $TEST/*.0; do
     # this won't work, we need all actual labels
     LABEL=`grep '[a-zA-Z0-9_.$]\\+:' $TMPNAME.s | sed 's/^\\(.*[^a-zA-Z0-9_.$]\\)\\?\\([a-zA-Z0-9_.$]\\+\\):.*$/\2/g'`
 
+    rm -f $TMPNAME.trace
     MATCHES=0
     for j in $LABEL; do
-	MATCHES="$MATCHES\\|$j"
+		MATCHES="$MATCHES\\|$j"
+		# count instructions
+		$DUMPINSTR $TMPNAME $j > /dev/null
+		if [ $? != 0 ]; then
+			echo "$bi FEHLGESCHLAGEN"
+			continue
+		fi
     done
 
     # filter trace

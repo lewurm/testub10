@@ -50,15 +50,13 @@ quit
 
 END
 
-gdb < $EXECFILE.tmp > $EXECFILE.trace 2>/dev/null
-
-mv $EXECFILE.trace $EXECFILE.output
+gdb < $EXECFILE.tmp > $EXECFILE.output 2>/dev/null
 
 awk -- '\
 /^====BEGIN/ {ll = ("begin " $2);} \
 /^==== / {print ll; ll = (" " substr($0, 5));} \
 /^====END/ {print "end", $2;}
-' $EXECFILE.output > $EXECFILE.trace
+' $EXECFILE.output >> $EXECFILE.trace
 
 echo instructions: `grep "^  " $EXECFILE.trace | wc -l`
 echo trace output: $EXECFILE.trace
