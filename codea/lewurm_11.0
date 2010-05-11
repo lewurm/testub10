@@ -1,5 +1,13 @@
 struct a b c end;
-method wfoo()
-	/* passt die addresse jedes mal? */
-	return 0x600ac0.c;
+
+method try0()
+	return 0x00100000.c;
+end;
+
+method try1()
+	return 0x01000000.c;
+end;
+
+method try2()
+	return 0xA0000000.c;
 end;
