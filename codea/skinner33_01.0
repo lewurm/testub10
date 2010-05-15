@@ -1,0 +1,23 @@
+method w()
+	return not 0;
+end;
+
+method x()
+	return not (not 0);
+end;
+
+method y()
+	return not 3;
+end;
+
+method z()
+	return not (not 3);
+end;
+
+method aa()
+	return not (not (not 0));
+end;
+
+method ab()
+	return not (not (not 3));
+end;
