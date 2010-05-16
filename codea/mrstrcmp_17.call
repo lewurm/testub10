@@ -1,0 +1,18 @@
+long f(long, long);
+long g(long, long);
+long h(long);
+long i(long);
+
+RET(f(0,  0x05) == 1 &&
+    f(0, -0x05) == 1 &&
+    f(0,  0x0A) == 0 &&
+    f(0,  0x0B) == 0 &&
+
+    g(0,  0x05) == 0 &&
+    g(0, -0x05) == 0 &&
+    g(0,  0x0A) == 0 &&
+    g(0,  0x0B) == 1 &&
+
+    h(0)        == 0 &&
+    i(0)        == 1);
+
