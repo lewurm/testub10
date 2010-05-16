@@ -1,5 +1,5 @@
 method test64()
-	return this - -0x80808080;
+	return this - -2139062144;
 end;
 
 method num()
