@@ -1,0 +1,8 @@
+struct x y z end;
+
+method a()
+       this.x := /*0*/815;
+       /*z := y * this.x;*/
+       return this.x;
+end;
+

@@ -1,0 +1,5 @@
+extern long long* b(long long this, long long *a);
+
+long long ar[3] = { 2, 4, 8 };
+
+RET(b(0xDEAD, ar) == ar && ar[0] == 3 && ar[1] == 2 && ar[2] == -4);

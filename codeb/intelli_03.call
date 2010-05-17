@@ -1,0 +1,6 @@
+extern long a(long long *this);
+extern long b(long long this, long long *a);
+
+long long ar[3] = { 2, 4, 8 };
+
+RET(a(ar) == -4711 && b(0xDEAD, ar) == 16);

@@ -1,0 +1,8 @@
+struct x y z end;
+
+method m(x)
+       var a := x;
+       this.x := (this.y or this.z) = a;
+       x := 47;
+       return this.y * x;
+end;
