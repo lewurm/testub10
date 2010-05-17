@@ -1,0 +1,26 @@
+#define OR(a,b)     ((long)(a) | (long)(b))
+
+long f1(long, long*, long*);
+long f2(long, long*, long*);
+long f3(long, long*, long*);
+long f4(long, long*, long*);
+long f5(long, long*, long*);
+long f6(long, long*, long*);
+long f7(long, long*, long*);
+long f8(long, long*, long*);
+long f9(long, long*, long*);
+
+long muh[] = {0x05f05f, 0x223344};
+long kuh[] = {0x00AACC, 0x563425};
+
+RET(f1(5, muh, kuh) == OR(            4,             5) &&
+    f2(5, muh, kuh) == OR(       muh[0],    0x55555555) &&
+    f3(5, muh, kuh) == OR(   0x55555555,        kuh[1]) &&
+    f4(5, muh, kuh) == OR(muh[1]-kuh[0], muh[0]-kuh[1]) &&
+    f5(5, muh, kuh) == OR(            0,             5) &&
+    f6(5, muh, kuh) == OR(            5,             0) &&
+    f7(5, muh, kuh) == OR(          muh,           kuh) &&
+    f8(5, muh, kuh) == OR(            5,      0x112233) &&
+    f9(5, muh, kuh) == OR(   0x11EEEEFF,             5) 
+   );
+

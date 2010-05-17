@@ -1,0 +1,37 @@
+struct foo bar end;
+
+method f1(a b)
+	return 4 or 5;
+end;
+
+method f2(a b)
+	return a.foo or 0x55555555;
+end;
+
+method f3(a b)
+	return 0x55555555 or b.bar;
+end;
+
+method f4(a b)
+	return (a.bar - b.foo) or (a.foo - b.bar);
+end;
+
+method f5(a b)
+	return (a.bar < b.foo) or this;
+end;
+
+method f6(a b)
+	return this or (b.bar =  a.foo);
+end;
+
+method f7(a b)
+	return a or b;
+end;
+
+method f8(a b)
+	return this or 0x112233;
+end;
+
+method f9(a b)
+	return 0x11EEEEFF or this;
+end;
