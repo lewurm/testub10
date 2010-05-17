@@ -1,0 +1,15 @@
+long f1(long, long*, long*);
+long f2(long, long*, long*);
+long f3(long, long*, long*);
+long f4(long, long*, long*);
+long f5(long, long*, long*);
+
+long muh[] = {0x05f05f, 0x223344};
+long kuh[] = {0x00AACC, 0x563425};
+
+RET(f1(0, muh, kuh) == muh[0] * 5 &&
+	f2(0, muh, kuh) == kuh[0] - (100 - muh[0]) &&
+	f3(0, muh, kuh) == kuh[0] - (100 - 50 - muh[0]) &&
+	f5(0, muh, kuh) == kuh[0] - (100 - muh[0] - kuh[0]) &&
+	f4(0, muh, kuh) == muh[0] * muh[1]
+	);
