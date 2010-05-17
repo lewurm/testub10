@@ -1,0 +1,8 @@
+method f(a b c)
+	if a < b then
+		var x := 0;
+		c := 1;
+	end;
+	/* x ist nicht im scope */
+	x := x - 1;
+end;

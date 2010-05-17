@@ -1,0 +1,32 @@
+struct
+	a b c
+end;
+
+method bar(d e f)
+	var foo := a;
+	foo := b - c;
+	var bar := d - (e * f);
+	
+	if(4 = 2) then
+		var x := 1;
+		var hiho := 0;
+	else
+		var hiho := 0x1f;
+	end;
+
+	var hiho := 2;
+
+	while 0 < hiho do
+		if (42) then
+			var hiho := 0xff; /* hiho existiert bereits */
+			hiho := hiho - 1;
+		end;
+	end;
+	
+	return 0;
+end;
+
+struct
+	g
+	h
+end;
