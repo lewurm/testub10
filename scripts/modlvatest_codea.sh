@@ -139,6 +139,7 @@ do
 	else
 		echo "[Error] Status: $retval. Erwartet: ${i#*.}"
 		let errnum=errnum+1
+		exit 3;
 	fi
 	echo
 fi
