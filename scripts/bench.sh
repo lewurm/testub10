@@ -77,7 +77,21 @@ for i in $TEST/*.0; do
 		echo "err: fuer den testfall \"$bi\" existiert noch keine referenzdatei"
 		ti=0
 	fi
-    echo "$bi: $ni (referenz: $ti)"
+
+	if [ $ni -gt $ti ]; then
+		#red
+		bcolor="\033[01;31m"
+	else
+		if [ $ni -eq $ti ]; then
+			#gray
+			bcolor="\033[01;30m"
+		else
+			#green
+			bcolor="\033[01;32m"
+		fi
+	fi
+
+    echo -e "$bcolor $bi: $ni (referenz: $ti) \033[0m"
     echo "$bi $ni" >> $RESULT
 
 	let gni=gni+$ni
