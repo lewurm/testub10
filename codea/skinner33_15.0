@@ -35,3 +35,51 @@ end;
 method f9(a b)
 	return 0x11EEEEFF or this;
 end;
+
+method f10(a b)
+	return (a.foo - 5) or 6;
+end;
+
+method f11(a b)
+	return 7 or (b.bar - 3);
+end;
+
+method f12(a b)
+	return (a.bar - 3) or b.foo;
+end;
+
+method f13(a b)
+	return a.foo or (b.bar - -3);
+end;
+
+method f14(a b)
+	return this or a.foo;
+end;
+
+method f15(a b)
+	return b.bar or this;
+end;
+
+method f16(a b)
+	return b.bar or 0;
+end;
+
+method f17(a b)
+	return 0 or a.foo;
+end;
+
+method f18(a b)
+	return 0 or this;
+end;
+
+method f19(a b)
+	return this or 0;
+end;
+
+method f20(a b)
+	return 0 or (b.foo * 1);
+end;
+
+method f21(a b)
+	return (a.foo * 1) or 0;
+end;

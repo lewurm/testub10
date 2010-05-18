@@ -1,26 +1,50 @@
 #define OR(a,b)     ((long)(a) | (long)(b))
 
-long f1(long, long*, long*);
-long f2(long, long*, long*);
-long f3(long, long*, long*);
-long f4(long, long*, long*);
-long f5(long, long*, long*);
-long f6(long, long*, long*);
-long f7(long, long*, long*);
-long f8(long, long*, long*);
-long f9(long, long*, long*);
+long  f1(long, long*, long*);
+long  f2(long, long*, long*);
+long  f3(long, long*, long*);
+long  f4(long, long*, long*);
+long  f5(long, long*, long*);
+long  f6(long, long*, long*);
+long  f7(long, long*, long*);
+long  f8(long, long*, long*);
+long  f9(long, long*, long*);
+long f10(long, long*, long*);
+long f11(long, long*, long*);
+long f12(long, long*, long*);
+long f13(long, long*, long*);
+long f14(long, long*, long*);
+long f15(long, long*, long*);
+long f16(long, long*, long*);
+long f17(long, long*, long*);
+long f18(long, long*, long*);
+long f19(long, long*, long*);
+long f20(long, long*, long*);
+long f21(long, long*, long*);
 
 long muh[] = {0x05f05f, 0x223344};
 long kuh[] = {0x00AACC, 0x563425};
 
-RET(f1(5, muh, kuh) == OR(            4,             5) &&
-    f2(5, muh, kuh) == OR(       muh[0],    0x55555555) &&
-    f3(5, muh, kuh) == OR(   0x55555555,        kuh[1]) &&
-    f4(5, muh, kuh) == OR(muh[1]-kuh[0], muh[0]-kuh[1]) &&
-    f5(5, muh, kuh) == OR(            0,             5) &&
-    f6(5, muh, kuh) == OR(            5,             0) &&
-    f7(5, muh, kuh) == OR(          muh,           kuh) &&
-    f8(5, muh, kuh) == OR(            5,      0x112233) &&
-    f9(5, muh, kuh) == OR(   0x11EEEEFF,             5) 
+RET( f1(5, muh, kuh) == OR(            4,             5) &&
+     f2(5, muh, kuh) == OR(       muh[0],    0x55555555) &&
+     f3(5, muh, kuh) == OR(   0x55555555,        kuh[1]) &&
+     f4(5, muh, kuh) == OR(muh[1]-kuh[0], muh[0]-kuh[1]) &&
+     f5(5, muh, kuh) == OR(            0,             5) &&
+     f6(5, muh, kuh) == OR(            5,             0) &&
+     f7(5, muh, kuh) == OR(          muh,           kuh) &&
+     f8(5, muh, kuh) == OR(            5,      0x112233) &&
+     f9(5, muh, kuh) == OR(   0x11EEEEFF,             5) &&
+    f10(5, muh, kuh) == OR(     muh[0]-5,             6) &&
+    f11(5, muh, kuh) == OR(            7,      kuh[1]-3) &&
+    f12(5, muh, kuh) == OR(     muh[1]-3,        kuh[0]) &&
+    f13(5, muh, kuh) == OR(       muh[0],      kuh[1]+3) &&
+    f14(5, muh, kuh) == OR(            5,        muh[0]) &&
+    f15(5, muh, kuh) == OR(       kuh[1],             5) &&
+    f16(5, muh, kuh) == OR(       kuh[1],             0) &&
+    f17(5, muh, kuh) == OR(            0,        muh[0]) &&
+    f18(5, muh, kuh) == OR(            0,             5) &&
+    f19(5, muh, kuh) == OR(            5,             0) &&
+    f20(5, muh, kuh) == OR(            0,        kuh[0]) &&
+    f21(5, muh, kuh) == OR(       muh[0],             0) 
    );
 
