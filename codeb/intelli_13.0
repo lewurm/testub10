@@ -1,0 +1,8 @@
+method m()
+	var x := 10;
+	while 0 < x do
+		x := x-1;
+	end;
+	return x;
+end;
+

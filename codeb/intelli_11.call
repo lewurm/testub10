@@ -1,0 +1,3 @@
+extern long long m(long long this);
+
+RET(m(0xCCACC) == 10);

@@ -1,0 +1,29 @@
+method m()
+	if this < -100 then
+		return -4711;
+	else
+		if (-10 < this) then
+			if (this < -5) then
+				if (this = -6) then
+					return 1;
+				else
+					return 2;
+				end;
+			else
+				if this = -4 then
+					return 3;
+				end;
+			if this = -3 then
+				return 6;
+			end;
+				if this = -2 then
+					return 7;
+				end;
+			end;
+		else
+			return 4;
+		end;
+	end;
+	return 5;
+end;
+

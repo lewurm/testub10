@@ -1,0 +1,11 @@
+method m(a)
+	var u := 10;
+	if this < 50 then
+		if 10 < a then
+			return a - 10;
+		end;
+		var x := 20;
+		u := u - (x * -1);
+	end;
+	return u;
+end;
