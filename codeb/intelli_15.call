@@ -1,0 +1,7 @@
+extern long long m1(long long *this, long long size);
+extern long long m2(long long this, long long y);
+
+long long ar[] = { 2, 4, 8, 16, 32 };
+
+RET(m1(ar, 3) == -20 && ar[0] == 22 && ar[1] == 150 && ar[2] == 150 &&
+m2(0xABC, 101) == 0 && m2(0xABC, -5) == -20 && m2(0xABC, 100) == 320);

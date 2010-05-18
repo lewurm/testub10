@@ -1,0 +1,16 @@
+struct x end;
+
+method m(s)
+	var i := 0;
+	var sum := 0;
+	while i < s do
+		(this - (-8 * i)).x := (this - (-8 * i)).x * 10;
+		if (this - (-8 * i)).x = 47110 then
+			(this - (-8 * i)).x := 0815;
+		end;
+		sum := sum - ((this - (-8 * i)).x * -1);
+		i := i - (-1);
+	end;
+	return sum;
+end;
+
