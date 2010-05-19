@@ -1,0 +1,6 @@
+struct a b c end;
+struct d e f end;
+
+method m(x)
+  return e;
+end;

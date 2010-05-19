@@ -1,0 +1,5 @@
+struct x end;
+
+method m(x)
+  return x;
+end;
