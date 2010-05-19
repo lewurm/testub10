@@ -1,0 +1,3 @@
+method m(x)
+  return not((not this) or (not x));
+end;

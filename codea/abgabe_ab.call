@@ -1,0 +1,2 @@
+extern long m(long,long,long,long);
+RET(m(1,2,3,5)==5 && m(3,2,1,9)==9);

@@ -1,0 +1,3 @@
+long s[]={12,23,34,45,53,61};
+extern long m(long *,long);
+RET(m(s,12)==23 && m(s+2,13)==45);

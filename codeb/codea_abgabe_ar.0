@@ -1,0 +1,7 @@
+method m(x y)
+  return y;
+end;
+
+method n(y x)
+  return y;
+end;
