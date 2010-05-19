@@ -1,0 +1,10 @@
+struct a d end;
+method f(b c s)
+	var t := 0;
+	/* lesender feldzugriff */
+	b := c*(s.a - 1);
+	b := c*(s.d - 1);
+	b := c*(t.a - 1);
+	/* Zusatz zu lewurm_05.0: ungültig, da c keine Feldvariable ist */
+	b := c*(t.c - 1);
+end;

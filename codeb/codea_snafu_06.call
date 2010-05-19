@@ -1,0 +1,21 @@
+long test64(long);
+long num(long);
+long num2(long);
+long globcmp(long*);
+long globcmp2(long*);
+
+
+long foo[] = {1337, 42};
+long bar[] = {23, 23};
+long foobar[] = {23, 42};
+
+RET((test64(0x1000000000) ==  (long) 0x1000000000 - (int) 0x80808080) 
+	&& (num(0) == -4)
+	&& (num2(0) == 26)
+	&& (globcmp(foo) == 0)
+	&& (globcmp(bar) == 0)
+	&& (globcmp(foobar) == 1)
+	&& (globcmp2(foo) == 0)
+	&& (globcmp2(bar) == 1)
+	&& (globcmp2(foobar) == 0)
+	);

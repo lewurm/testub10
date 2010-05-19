@@ -1,0 +1,33 @@
+struct foo bar end;
+
+method f1(a)
+	return not(this-a.bar);
+end;
+
+method f2(a)
+	return not(a.foo);
+end;
+
+method f3(a)
+	return not(not(a.foo));
+end;
+
+method f4(a)
+	return not(a.bar);
+end;
+
+method f5(a)
+	return not(not(a.bar));
+end;
+
+method f6(a)
+	return not(not(a.foo - a.bar));
+end;
+
+method f7(a)
+	return not(not(a.foo * a.bar));
+end;
+
+method f8(a)
+	return not(this*a.bar);
+end;

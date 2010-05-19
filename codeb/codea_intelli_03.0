@@ -1,0 +1,4 @@
+method f(a b c)
+	return (a < (b  < c)) * this; 
+end;
+

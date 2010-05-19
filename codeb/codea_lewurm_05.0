@@ -1,0 +1,3 @@
+method Long(a b c d e)
+	return e - d - c - b - a - this;
+end;

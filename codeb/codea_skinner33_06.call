@@ -1,0 +1,50 @@
+#define F1(a,b)     ((long)(a) - ((long)(b) * -3UL))
+#define F2(a,b)     ((long)(a) - ((long)(b) * 2UL))
+#define F3(a,b)     ((long)(a) - ((long)(b) * 5UL))
+#define  F(a,b,c,d) ((long)(a) - (8UL * ((long)(b) - (-4UL * ((long)(c) - (-3UL * (long)(d)))))))
+
+
+/* based on mrstrcmp_14
+   in our language the lea opts are only possible for -1, -2, -4 and -8
+   this testcase tests other constants and other op order in mul
+*/
+
+long f1(long, long, long);
+long f2(long, long, long);
+long f3(long, long, long);
+long f(long, long, long, long, long);
+
+RET(f1(0,    3,  20) == F1(   3,  20) &&
+    f1(0, -100,  80) == F1(-100,  80) &&
+    f1(0,   50,  -9) == F1(  50,  -9) &&
+    f1(0,  -77, -50) == F1( -77, -50) &&
+
+    f2(0,    3,  20) == F2(   3,  20) &&
+    f2(0, -100,  80) == F2(-100,  80) &&
+    f2(0,   50,  -9) == F2(  50,  -9) &&
+    f2(0,  -77, -50) == F2( -77, -50) &&
+
+    f3(0,    3,  20) == F3(   3,  20) &&
+    f3(0, -100,  80) == F3(-100,  80) &&
+    f3(0,   50,  -9) == F3(  50,  -9) &&
+    f3(0,  -77, -50) == F3( -77, -50) &&
+
+    f(0,  10,  20,  30,  40) == F( 10,  20,  30,  40) &&
+    f(0, -10,  20, -30,  40) == F(-10,  20, -30,  40) &&
+    f(0,  10, -20,  30, -40) == F( 10, -20,  30, -40) &&
+    f(0, -10, -20, -30, -40) == F(-10, -20, -30, -40) &&
+
+    f1(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F1(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F2(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f3(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F3(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+
+    f1(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F1(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F2(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f3(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F3(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) 
+   );

@@ -1,0 +1,9 @@
+method f1()
+	return (this-0-0)-0-0-6;
+end;
+method f2()
+	return (this)-0;
+end;
+method f3()
+	return this-0;
+end;

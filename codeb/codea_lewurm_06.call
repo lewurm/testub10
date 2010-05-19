@@ -1,0 +1,2 @@
+long f(long, long, long);
+RET(f(0xCAFEBABE, 20, 10)==-7980);

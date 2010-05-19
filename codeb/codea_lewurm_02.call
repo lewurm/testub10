@@ -1,0 +1,2 @@
+extern long f(long,long,long,long,long);
+RET(f(100,50,15,10,5)==80);

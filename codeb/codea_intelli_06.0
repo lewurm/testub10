@@ -1,0 +1,5 @@
+struct x y z end;
+
+method f()
+	   return (x - y) * z;
+end;

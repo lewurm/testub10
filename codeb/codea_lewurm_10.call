@@ -1,0 +1,5 @@
+long w(long);
+long x(long);
+long y(long);
+
+RET(w(0)==1 && x(0)==0 && y(1)==0);

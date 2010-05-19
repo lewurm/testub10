@@ -1,0 +1,3 @@
+method meh(a b c d)
+	return (this * (a - b)) - (c - (a * d));
+end;

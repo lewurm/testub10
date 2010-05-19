@@ -1,0 +1,11 @@
+method a()
+	return 5 - 3;
+end;
+
+method b(x)
+	return 5 - x;
+end;
+
+method c(x)
+	return x - 3;
+end;

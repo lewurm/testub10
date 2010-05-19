@@ -1,0 +1,7 @@
+method f1(a b c)
+	return (-2 * (b - c)) - a;
+end;
+
+method f2(a b c)
+	return (-3 * (b - c)) - a;
+end;

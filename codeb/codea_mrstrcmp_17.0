@@ -1,0 +1,16 @@
+method f(a)
+	return (a < 0x0A);
+end;
+
+method g(a)
+	return (0x0A < a);
+end;
+
+method h()
+	return (0x0A < 0x09);
+end;
+
+method i()
+	return (0x0A < 0x0B);
+end;
+

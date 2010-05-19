@@ -1,0 +1,11 @@
+struct x y z b end;
+
+method f(a b)
+	return b;
+end;
+
+struct u v end;
+
+method g(a)
+	return u * a.v;
+end;

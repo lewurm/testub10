@@ -1,0 +1,7 @@
+long f1(long);
+long f2(long);
+long f3(long);
+long f4(long);
+RET((f1(4) == 24) &&
+	(f2(4) == 4) &&
+	(f3(4) == 4));

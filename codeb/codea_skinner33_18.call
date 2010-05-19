@@ -1,0 +1,24 @@
+
+long f1(long, long*);
+long f2(long, long*);
+long f3(long, long*);
+long f4(long, long*);
+long f5(long, long*);
+long f6(long, long*);
+long f7(long, long*);
+long f8(long, long*);
+long f9(long, long*);
+
+long muh[] = {5, 6};
+long kuh[] = {6, 5};
+
+RET(f1(4,muh) == 1 && f1(5,kuh) == 0 &&
+	f2(5,muh) == 0 && f2(5,kuh) == 1 &&
+	f3(5,muh) == 1 && f3(5,kuh) == 0 &&
+	f4(5,muh) == 0 && f4(5,kuh) == 1 &&
+	f5(5,muh) == 1 && f5(5,kuh) == 0 &&
+	f6(6,muh) == 1 && f6(6,kuh) == 0 &&
+	f7(5,muh) == 0 && f7(5,kuh) == 1 &&
+	f8(5,muh) == 1 && f8(5,kuh) == 0 &&
+	f9(5,muh) == 0 && f9(5,kuh) == 1 
+);

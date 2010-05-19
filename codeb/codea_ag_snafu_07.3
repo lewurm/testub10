@@ -1,0 +1,9 @@
+struct g1 g2 g3 g4 end;
+struct g5 g6 end;
+
+method foo(p1 p2 p3)
+	var l1 := 0;
+	var l2 := g6;
+
+	g1.g2.p1 := 0xDEAD; /* p1 kein feld */
+end;

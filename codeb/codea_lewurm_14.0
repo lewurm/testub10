@@ -1,0 +1,21 @@
+struct foo bar end;
+
+method f1(a b)
+	return a.foo * 5;
+end;
+
+method f2(a b)
+	return b.foo - (100 - a.foo);
+end;
+
+method f3(a b)
+	return b.foo - (100 - 50 - a.foo);
+end;
+
+method f4(a b)
+	return a.foo * a.bar;
+end;
+
+method f5(a b)
+	return b.foo - (100 - a.foo - b.foo);
+end;

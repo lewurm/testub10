@@ -1,0 +1,19 @@
+method w(a)
+	return this = a;
+end;
+
+method x()
+	return this = 3;
+end;
+
+method y()
+	return 3 = this;
+end;
+
+method z()
+	return -13 = -13;
+end;
+
+method override()
+	return 0x55555;
+end;

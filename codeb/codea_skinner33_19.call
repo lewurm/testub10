@@ -1,0 +1,22 @@
+long f1(long,long,long);
+long f2(long,long,long);
+long f3(long,long,long);
+long f4(long,long,long);
+long f5(long,long,long);
+long f6(long,long,long);
+long f7(long,long,long);
+long f8(long,long,long);
+
+RET(
+f1(0,0,0) == 1 && f1(0,1,1) == 0 &&
+f2(0,0,0) == 0 && f2(0,1,1) == 1 &&
+
+f3(0,4,4) == 1 && f3(0,4,3) == 0 &&
+f4(0,4,4) == 0 && f4(0,4,3) == 1 &&
+
+f5(0,5,4) == 1 && f5(0,4,5) == 0 &&
+f6(0,5,4) == 0 && f6(0,4,5) == 1 &&
+
+f7(0,5,4) == 1 && f7(0,5,5) == 0 &&
+f8(0,5,4) == 0 && f8(0,5,5) == 1 
+);

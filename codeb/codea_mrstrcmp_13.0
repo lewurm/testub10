@@ -1,0 +1,19 @@
+method f1(a b)
+	return a - (-1 * b);
+end;
+
+method f2(a b)
+	return a - (-2 * b);
+end;
+
+method f4(a b)
+	return a - (-4 * b);
+end;
+
+method f8(a b)
+	return a - (-8 * b);
+end;
+
+method  f(a b c d)
+	return a - (-8 * (b - (-4 * (c - (-2 * d)))));
+end;
