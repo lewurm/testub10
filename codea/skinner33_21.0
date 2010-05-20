@@ -1,0 +1,5 @@
+struct a b c end;
+
+method m(x)
+  return ((this-0)-8).c;
+end;
