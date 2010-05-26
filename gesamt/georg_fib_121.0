@@ -1,0 +1,10 @@
+/* fibonacci */
+
+/* F_0 = 0 */
+/* F_1 = 1 */
+/* F_n = F_{n-1} + F_{n-2} */
+
+method fib(x)
+	if x < 2 then return x; end;
+	return fib(x-1)-(0-fib(x-2));
+end;

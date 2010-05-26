@@ -1,0 +1,25 @@
+/* fibonacci */
+
+/* F_0 = 0 */
+/* F_1 = 1 */
+/* F_n = F_{n-1} + F_{n-2} */
+
+/*
+return e;
+return t-t;
+return t-(e);
+return t-(0-t);
+return c-(0-c);
+return mref()-(0-mref());
+return t.id()-(0-t.id());
+return (e).id()-(0-(e).id());
+return (t-t).id()-(0-(t-t).id());
+return (this-1).fib()-(0-(this-2).fib());
+*/
+
+method fib()
+	if this < 2 then return this; end;
+	var a := (this-1).fib();
+	var b := (this-2).fib();
+	return a-(0-b);
+end;

@@ -1,0 +1,12 @@
+/* fibonacci */
+
+/* F_0 = 0 */
+/* F_1 = 1 */
+/* F_n = F_{n-1} + F_{n-2} */
+
+method fib(x)
+	if x < 2 then return x; end;
+	var a := fib(x-1);
+	var b := fib(x-2);
+	return a-(0-b);
+end;
