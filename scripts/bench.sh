@@ -74,7 +74,7 @@ for i in $TEST/*.0; do
 	if [ -f $TEST/${bi}.instr ]; then
 		ti=`cat $TEST/$bi.instr`
 	else
-		echo "err: fuer den testfall \"$bi\" existiert noch keine referenzdatei"
+		echo "err: fuer den testfall \"$bi\" existiert noch keine referenzdatei. instruktionen werden verworfen."
 		ti=0
 	fi
 
@@ -94,8 +94,10 @@ for i in $TEST/*.0; do
     echo -e "$bcolor $bi: $ni (referenz: $ti) \033[0m"
     echo "$bi $ni" >> $RESULT
 
-	let gni=gni+$ni
-	let gti=gti+$ti
+	if [ -f $TEST/${bi}.instr ]; then
+		let gni=gni+$ni
+		let gti=gti+$ti
+	fi
 
     # remove waste
     rm -f $TMPNAME $TMPNAME.s $TMPNAME.trace
