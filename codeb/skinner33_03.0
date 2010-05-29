@@ -1,0 +1,9 @@
+struct a end;
+
+method foo(b)
+	if 0 * b then
+		return b;
+	else
+		return (b - a);
+	end;
+end;

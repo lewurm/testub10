@@ -1,0 +1,9 @@
+
+long foo(long*, long);
+
+long muh[] = {10, 3};
+long kuh[] = {2,6};
+
+
+RET(foo(muh, 10) == 1 && muh[1] == 3 && muh[0] == 3 && foo(kuh, 50) == 14 && kuh[0] == 6 && kuh[1] == 6 ); 
+

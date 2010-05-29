@@ -1,0 +1,9 @@
+
+long foo(long, long);
+long bar(long*, long);
+long bla(long*);
+
+long muh[] = {3}, kuh[] = {0};
+
+RET(foo(5,1) == 40 && foo(4,0) == 60 && bar(muh, 1) == 2 && bar(muh,0) == 18 && bla(muh) == 5 && bla(kuh) == 0);
+

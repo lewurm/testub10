@@ -1,0 +1,13 @@
+
+struct a b end;
+
+method foo(n)
+	if 0 then
+		return 0;
+	end;
+	a := b;	
+	if not(not(a = b)) then
+		return n - (a*b);
+	end;
+	return 0x9999;
+end;

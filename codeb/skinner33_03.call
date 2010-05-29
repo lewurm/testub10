@@ -1,0 +1,7 @@
+
+long foo(long*, long);
+
+long muh[] = {4};
+
+RET(foo(muh,5) == 1 && foo(muh, 2) == -2 && foo(muh,0) == -4);
+
