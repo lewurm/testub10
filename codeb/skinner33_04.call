@@ -1,9 +1,15 @@
 
 long foo(long*, long);
+long bar(long, long);
+long bla(long, long);
+long blubb(long, long);
+long miau(long*, long, long);
 
 long muh[] = {10, 3};
 long kuh[] = {2,6};
 
+long narf[] = {1,4,5,6};
+long puit[] = {4,3,2,1};
 
-RET(foo(muh, 10) == 1 && muh[1] == 3 && muh[0] == 3 && foo(kuh, 50) == 14 && kuh[0] == 6 && kuh[1] == 6 ); 
+RET(foo(muh, 10) == 1 && muh[1] == 3 && muh[0] == 3 && foo(kuh, 50) == 14 && kuh[0] == 6 && kuh[1] == 6 && bar(0xf00,2) == -2 && bar(0xf00,3) == 36 && bla(0x42, 4) == 1 && bla(0x42, 0) == 0 && blubb(0x1337, 3) == 10 && blubb(0xA, 0) == 5 && blubb(0xB, 5) == 20 && miau(narf, 4, 5) == 0 && narf[0] == 1 && narf[1] == -15 && narf[2] == 35 && narf[3] == 160000000 && miau(puit, 6,3) == 0 && puit[0] == 4 && puit[1] == 45 && puit[2] == 140 && puit[3] == 640000000);
 

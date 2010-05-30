@@ -15,3 +15,10 @@ method bar(n)
 	return x;
 end;
 
+method bla(m n)
+	if not((m-n) < (m*n)) then
+		return m;
+	else
+		return n;
+	end; 
+end;
