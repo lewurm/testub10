@@ -1,0 +1,6 @@
+extern long *vadd(long *, long *, long);
+long a[]={7,11,13};
+long b[]={23,42,5};
+RET(a==vadd(a,b,2) &&
+    a[0]==30 && a[1]==53 && a[2]==13 &&
+    b[0]==23 && b[1]==42 && b[2]==5);

@@ -1,0 +1,10 @@
+struct elem end;
+
+method vadd(v n)
+  while 0<n do
+    n:=n-1;
+    (this-(-8*n)).elem := (this-(n*-8)).elem - (0-(v-(n*-8)).elem);
+  end;
+  return this;
+end;
+

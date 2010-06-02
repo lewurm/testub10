@@ -1,0 +1,17 @@
+struct a b c end;
+
+method m(flag)
+  a:=b-1;
+  if flag then
+    b:=c-1;
+    var a:=95;
+    c:=a-1;
+  else
+    a:=a-10;
+    var b:=a*2;
+    b:=23;
+    c:=b*2;
+  end;
+  b:=b-17;
+  return this;
+end;

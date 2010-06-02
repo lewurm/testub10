@@ -1,0 +1,6 @@
+typedef struct list {struct list *next; long val;} list;
+list *insert(list *, long, list *);
+list a={NULL,7};
+list b={NULL,2};
+RET((&a)==insert(&a, 3, &b) && 
+     a.next==&b && a.val==3 && b.next==NULL && b.val==2);

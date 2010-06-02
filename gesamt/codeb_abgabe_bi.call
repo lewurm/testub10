@@ -1,0 +1,9 @@
+typedef struct foo {long a; long b; long c;} foo;
+extern foo *m(foo *, long);
+foo s1={29,37,41};
+foo s2={6,28,216};
+
+RET((&s1)==m(&s1,25) && (&s2)==m(&s2,0) &&
+    s1.a==36 && s1.b==23 && s1.c==94 &&
+    s2.a==17 && s2.b==11 && s2.c==46);
+

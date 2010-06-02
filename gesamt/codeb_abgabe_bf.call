@@ -1,0 +1,2 @@
+extern long ggt(long, long);
+RET (6==ggt(42,108));

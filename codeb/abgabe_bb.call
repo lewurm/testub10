@@ -1,0 +1,2 @@
+extern long m(long);
+RET(m(7)==23 && m(13)==47);

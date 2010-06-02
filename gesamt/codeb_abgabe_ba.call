@@ -1,0 +1,2 @@
+extern long m(long,long);
+RET(m(7,4)==6 && m(18,22)==-8);

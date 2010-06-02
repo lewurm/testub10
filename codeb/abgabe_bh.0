@@ -1,0 +1,9 @@
+struct next val end;
+
+
+method insert(val list)
+/* usage: list:=node.insert(5,list) */
+  this.val := val;
+  next := list;
+  return this;
+end;

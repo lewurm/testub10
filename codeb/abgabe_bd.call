@@ -1,0 +1,2 @@
+extern long mymax(long,long);
+RET(mymax(7,4)==7 && mymax(18,22)==22);

@@ -1,0 +1,7 @@
+method mymax(that)
+  if this<that then
+    return that;
+  else
+    return this;
+  end;
+end;

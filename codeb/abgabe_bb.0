@@ -1,0 +1,4 @@
+method m()
+  var that:=3*this;
+  return this or that;
+end;

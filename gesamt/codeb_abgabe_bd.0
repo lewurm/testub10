@@ -1,0 +1,6 @@
+method mymax(that)
+  if not (this<that) then
+    that:=this;
+  end;
+  return that;
+end;

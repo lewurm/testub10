@@ -1,0 +1,9 @@
+typedef struct list {struct list *next; } list;
+
+extern long length(list *);
+list a={NULL};
+list b={&a};
+list c={&b};
+list d={&c};
+list e={&a};
+RET(2==length(&e) && 4==length(&d));

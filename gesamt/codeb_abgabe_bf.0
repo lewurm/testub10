@@ -1,0 +1,11 @@
+method ggt(b)
+  var a:=this;
+  while b do
+    if b<a then
+      a:=a-b;
+    else
+      b:=b-a;
+    end;
+  end;
+  return a;
+end;
