@@ -1,0 +1,8 @@
+method f()
+	var x := g();
+	return x;
+end;
+
+method g()
+	return 4;
+end;

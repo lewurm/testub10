@@ -1,0 +1,7 @@
+method f()
+	return (this-50).g();
+end;
+
+method g()
+	return this--50;
+end;

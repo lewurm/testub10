@@ -1,0 +1,13 @@
+method f(a)
+	var x := a--100;
+	var y := g(x);
+	y := y - 100 - (0-x);
+	return y;
+end;
+
+method g(b)
+	var x := 1;
+	var y := 2;
+	var z := -3;
+	return b-x-y-z;
+end;

@@ -1,0 +1,10 @@
+long f(long);
+long g(long);
+#define ERG(a) ((a-1)-(a-2)-a)
+int ret1 = f(-10);
+int ret2 = f(1337);
+int ret3 = f(-358193);
+printf("ret1 ist %6i (sollte %6i sein)\n", ret1, ERG(-10));
+printf("ret2 ist %6i (sollte %6i sein)\n", ret2, ERG(1337));
+printf("ret3 ist %6i (sollte %6i sein)\n", ret3, ERG(-358193));
+RET(ret1 == ERG(-10) && ret2 == ERG(1337) && ret3 == ERG(-358193));

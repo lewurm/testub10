@@ -1,0 +1,8 @@
+method f(a)
+	return (g(a*5) - (0-this));
+end;
+
+method g(b)
+	b := (0-b) - 100;
+	return this-b;
+end;

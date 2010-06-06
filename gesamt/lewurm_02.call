@@ -1,0 +1,6 @@
+long f(long,long);
+long g(long,long);
+#define ERG 200
+int ret = f(0xdead,50);
+printf("ret ist %i (sollte %i sein)\n", ret, ERG);
+RET(ret == ERG);
