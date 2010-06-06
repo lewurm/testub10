@@ -1,0 +1,7 @@
+method m()
+       return a(4 - this, (10 * this) - (10 - this));
+end;
+
+method a(x y)
+       return x - y - (this * -1);
+end;

@@ -1,0 +1,12 @@
+method m()
+       var x:= (this - 10).a(10, 5);
+       /*return x;*/
+       var z:= x - a(x, this);
+       /*return z;*/
+       return (x * z) - this;
+end;
+
+method a(x y)
+       var u := this - x - y;
+       return u * 2;
+end;

@@ -1,0 +1,3 @@
+extern long long m(long long);
+
+RET(m(10) == 40);

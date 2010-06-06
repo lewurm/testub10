@@ -1,0 +1,15 @@
+struct a b c d end;
+
+method m(ar)
+       20 - ar.inc() - 70;
+       var y := this.b - ar.inc() - (this.inc() * -10) - this.b - ar.b;
+       return ar.inc() - inc() - (y * -1);
+end;
+
+method inc()
+       this.a := this.a - -1;
+       this.b := this.b - -1;
+       this.c := this.c - -1;
+       this.d := this.d - -1;
+       return this.a;
+end;

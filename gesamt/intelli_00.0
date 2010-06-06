@@ -1,0 +1,7 @@
+method m()
+       return a(4);
+end;
+
+method a(x)
+       return this * x;
+end;

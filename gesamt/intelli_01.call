@@ -1,0 +1,7 @@
+extern long long m(long long);
+
+long t = m(-6);
+
+//printf("%ld\n", t);
+
+RET(m(-6) == 80);
