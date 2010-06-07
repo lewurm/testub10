@@ -53,7 +53,7 @@ for i in $TEST/*.0; do
     #LABEL=`grep '.globl' $TMPNAME.s | sed 's/^.*\\.globl *\\([a-zA-Z0-9_]\\+\\).*$/\1/g'`
 
     # this won't work, we need all actual labels
-     grep '[a-zA-Z_][a-zA-Z0-9_]*:' $TMPNAME.s | sed 's/^\(.*[^a-zA-Z_.]\)\?\([a-zA-Z0-9_.$]\+\):.*$/\2/g' > $TMPNAME.uniq
+     grep '[a-zA-Z0-9_.$]\+:' $TMPNAME.s | sed 's/^\(.*[^a-zA-Z0-9_.$]\)\?\([a-zA-Z0-9_.$]\+\):.*$/\2/g' > $TMPNAME.uniq
 
      LABEL_ASM=`cat $TMPNAME.uniq`
 
