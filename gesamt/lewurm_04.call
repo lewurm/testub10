@@ -1,5 +1,4 @@
 long f(long);
-long g(long);
 #define ERG(a) ((a-1)-(a-2)-a)
 int ret1 = f(-10);
 int ret2 = f(1337);

@@ -1,4 +1,2 @@
 long f(long);
-long g(long);
-
 RET(f(0xdead) == 4);

@@ -41,6 +41,18 @@ erwartete Ausgabe fuer die Datei bar.0 nennen Sie bar.out.
 *	Jeder Testfall hat als Praefix "<nick>_", sodass keine Namenskonflikte entstehen.
 *	Ab codea sollte auch fuer jeden erfolgreichen Testfall eine .instr Datei angelegt werden die einen Referenzwert der Instruktionen enthaelt.
 
+### Hinweis fuer *gesamt* und `bench.sh`
+
+In der Call-Datei bitte **nur** Funktionen deklarieren die tatsaechlich in der
+Call-Datei selbst aufgerufen werden. Beispiel:
+	method f()
+		return g();
+	end;
+	method g()
+		return 123;
+	end;
+so muss in der Call-Datei nur `f()` deklariert werden.
+
 
 # Wie kannst du beitragen?
 

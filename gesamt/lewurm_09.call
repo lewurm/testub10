@@ -1,0 +1,20 @@
+unsigned long long f(unsigned long long[]);
+
+/* hint: pointer arithmetic in C */
+#define ERG (ar + 3)
+
+unsigned long long ar[] = {5, 6, 7};
+unsigned long long ar_copy[] = {5, 6, 7};
+int j;
+unsigned long long ret;
+
+printf("adr of ar: 0x%016lx\n", ar);
+for(j=0; j < sizeof ar / sizeof ar[0]; j++) {
+	printf("ar[%i]: %d\n", j, ar[j]);
+}
+ret = f(ar);
+printf("ret ist 0x%016lx (sollte 0x%016lx sein)\n", ret, ERG);
+for(j=0; j < sizeof ar / sizeof ar[0]; j++) {
+	printf("ar[%i]: %d\n", j, ar[j]);
+}
+RET(ret == (unsigned long long) ERG && ar[0] == ar_copy[0] * 30 && ar[1] == ar_copy[1] * 10 && ar[2] == ar_copy[2] * 20);

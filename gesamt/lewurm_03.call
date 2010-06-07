@@ -1,5 +1,4 @@
 long f(long);
-long g(long);
 #define ERG 320
 int ret = f(ERG);
 printf("ret ist %i (sollte %i sein)\n", ret, ERG);
