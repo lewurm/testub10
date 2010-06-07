@@ -1,0 +1,8 @@
+struct a end;
+method f()
+	return this.a - inc();
+end;
+method inc()
+	this.a := this.a--1;
+	return this.a;
+end;

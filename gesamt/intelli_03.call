@@ -14,5 +14,8 @@ printf("ret: %ld\n", ret);
 for(i=0; i < sizeof z1/sizeof z1[0]; i++) {
 	printf("z1[%i]: %ld, z2[%i]: %ld\n", i, z1[i], i, z2[i]);
 }
+printf("anmerkung: dieser testfall ist von seiteneffekten gepraegt\n"
+	"es *koennte* passieren, dass der testfall richtig ist obwohl er\n"
+	"fehlschlaegt, da die auswertungsreihenfolge nicht vorgegeben ist\n\n");
 
-RET(ret == -16 && z1[0] == 0 && z2[0] == 10 && z1[1] == 4 && z1[2] == 6 && z1[3] == 8 && z1[4] == 10 && z1[5] == 10 && z1[6] == 12 && z2[1] == 23 && z2[2] == 43 && z2[3] == 63 && z2[4] == 83 && z2[5] == 100 && z2[6] == 120);
+RET((ret == -16 || ret == -14) && z1[0] == 0 && z2[0] == 10 && z1[1] == 4 && z1[2] == 6 && z1[3] == 8 && z1[4] == 10 && z1[5] == 10 && z1[6] == 12 && z2[1] == 23 && z2[2] == 43 && z2[3] == 63 && z2[4] == 83 && z2[5] == 100 && z2[6] == 120);

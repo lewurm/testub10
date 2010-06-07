@@ -1,0 +1,7 @@
+long f(long[]);
+long ar[] = {100};
+int ret = f(ar);
+#define ERG1 (100 - 101)
+#define ERG2 (101 - 101)
+printf("ret ist %2i (sollte %2i ODER %2i sein)\n", ret, ERG1, ERG2);
+RET(ret == ERG1 || ret == ERG2);
