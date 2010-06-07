@@ -1,0 +1,21 @@
+long fa (long, long, long, long, long);
+long fa_(long, long, long, long, long);
+long fb (long, long, long, long, long);
+long fb_(long, long, long, long, long);
+long fc (long, long, long, long, long);
+long fc_(long, long, long, long, long);
+long fd (long, long, long, long, long);
+long fd_(long, long, long, long, long);
+
+long (*fp[])(long, long, long, long, long) = {fa, fa_, fb, fb_, fc, fc_, fd, fd_};
+char st[sizeof fp/sizeof fp[0]][4] = {"fa ", "fa_", "fb ", "fb_", "fc ", "fc_", "fd ", "fd_"};
+
+#define PAR(a) ((a-'a'+1)*10)
+int i, t, r = 1;
+
+for(i=0; i < sizeof fp/sizeof fp[0]; i++) {
+	t = fp[i](0xdead, PAR('a'), PAR('b'), PAR('c'), PAR('d'));
+	printf("returnwert von %s() ist %3i (erwartet: %3i)\n", st[i], t, PAR(st[i][1]));
+	r = r && (t==PAR(st[i][1]));
+}
+RET(r);

@@ -1,0 +1,7 @@
+method f()
+	return (this-1).g(this-5, this-10);
+end;
+
+method g(a b)
+	return this-a-b;
+end;

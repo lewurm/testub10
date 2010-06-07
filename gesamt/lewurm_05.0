@@ -1,0 +1,31 @@
+method fa(a b c d)
+	return g(a, b, c, d);
+end;
+method fa_(a b c d)
+	return g(a, b, c, d,);
+end;
+
+method fb(a b c d)
+	return g(b, c, d, a);
+end;
+method fb_(a b c d)
+	return g(b, c, d, a,);
+end;
+
+method fc(a b c d)
+	return g(c, d, a, b);
+end;
+method fc_(a b c d)
+	return g(c, d, a, b,);
+end;
+
+method fd(a b c d)
+	return g(d, a, b, c);
+end;
+method fd_(a b c d)
+	return g(d, a, b, c,);
+end;
+
+method g(a b c d)
+	return a;
+end;
