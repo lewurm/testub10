@@ -1,0 +1,11 @@
+long fo0(long, long, long, long, long);
+#define ARG1 10
+#define ARG2 -10
+#define ARG3 -20
+#define ARG4 -30
+
+#define ERG (ARG1 - ARG2 - ARG3 - ARG4 + 100)
+
+int ret = fo0(0xdead, ARG1, ARG2, ARG3, ARG4);
+printf("ret ist %8i (sollte %8i sein)\n", ret, ERG);
+RET(ret == ERG);

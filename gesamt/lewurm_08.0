@@ -1,0 +1,16 @@
+method fo0(a b c d)
+	var x := g();
+	return a-b-c-d-x;
+end;
+method g()
+	h();
+	return -100;
+end;
+method h()
+	var q := 0;
+	var w := 0;
+	var e := 0;
+	var r := 0;
+	var t := 0;
+	return (q*w)-(e*r)-t;
+end;
