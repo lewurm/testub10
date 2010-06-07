@@ -53,12 +53,18 @@ for i in $TEST/*.0; do
     #LABEL=`grep '.globl' $TMPNAME.s | sed 's/^.*\\.globl *\\([a-zA-Z0-9_]\\+\\).*$/\1/g'`
 
     # this won't work, we need all actual labels
-    LABEL=`grep '[a-zA-Z0-9_.$]\\+:' $TMPNAME.s | sed 's/^\\(.*[^a-zA-Z0-9_.$]\\)\\?\\([a-zA-Z0-9_.$]\\+\\):.*$/\2/g'`
+     grep '[a-zA-Z_][a-zA-Z0-9_]*:' $TMPNAME.s | sed 's/^\(.*[^a-zA-Z_.]\)\?\([a-zA-Z0-9_.$]\+\):.*$/\2/g' > $TMPNAME.uniq
+
+     LABEL_ASM=`cat $TMPNAME.uniq`
+
+     # functionidentifiers from CALL-file
+     grep '[a-zA-Z_][a-zA-Z0-9_]*(.*)' ${i%.0}.call | sed 's/.*[^a-zA-Z_]\([a-zA-Z_][a-zA-Z0-9_]*\)(.*)\;/\1/g' | sort | uniq >> $TMPNAME.uniq
+
+     LABEL=`sort $TMPNAME.uniq | uniq -d`
+     rm $TMPNAME.uniq
 
     rm -f $TMPNAME.trace
-    MATCHES=0
     for j in $LABEL; do
-		MATCHES="$MATCHES\\|$j"
 		# count instructions
 		$DUMPINSTR $TMPNAME $j > /dev/null
 		if [ $? != 0 ]; then
@@ -66,6 +72,11 @@ for i in $TEST/*.0; do
 			continue
 		fi
     done
+
+    MATCHES=0
+	for j in $LABEL_ASM; do
+		MATCHES="$MATCHES\\|$j"
+	done
 
     # filter trace
     grep "<\\($MATCHES\\)\\(+[0-9]*\\)\\?>:" $TMPNAME.trace > $TRACEDIR/$bi.trace
