@@ -1,0 +1,4 @@
+
+long even(long, long);
+
+RET(even(42,0) == 0 && even(42,1) == 1 && even(42,2)  == 0 && even(42,3) == 1);

@@ -1,0 +1,6 @@
+
+extern long even(long*);
+
+long a[] = {0}, b[] = {1}, c[] = {2}, d[] = {3};
+
+RET(even(a) == 0 && even(b) == 1 && even(c)  == 0 && even(d) == 1);

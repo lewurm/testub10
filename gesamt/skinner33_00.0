@@ -1,0 +1,19 @@
+struct a end;
+
+method even()
+	if this.a = 0 then
+		return 0;
+	else
+		this.a := this.a - 1;
+		return odd();
+	end;
+end;
+
+method odd()
+	if 0 = this.a then
+		return 1;
+	else
+		this.a := this.a - 1;
+		return even();
+	end;
+end;
