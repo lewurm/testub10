@@ -1,0 +1,6 @@
+method m()
+  if this < 10 then
+    return 3;
+  end;
+  return 0;
+end;

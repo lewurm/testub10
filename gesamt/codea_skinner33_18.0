@@ -1,0 +1,38 @@
+struct foo bar end;
+
+method f1(a)
+	return (a.foo * 1) = 5;
+end;
+
+method f2(a)
+	return 5 = (a.bar * 1);
+end;
+
+method f3(a)
+	return (a.foo * 1) = this;
+end;
+
+method f4(a)
+	return this = (a.bar * 1);
+end;
+
+method f5(a)
+	return a.foo = (this * 1);
+end;
+
+method f6(a)
+	return a.foo = 5;
+end;
+
+method f7(a)
+	return 5 = a.bar;
+end;
+
+method f8(a)
+	return a.foo = this;
+end;
+
+method f9(a)
+	return this = a.bar;
+end;
+

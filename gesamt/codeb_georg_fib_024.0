@@ -1,0 +1,20 @@
+/* fibonacci */
+
+/* F_0 = 0 */
+/* F_1 = 1 */
+/* F_n = F_{n-1} + F_{n-2} */
+
+method fib(x)
+	var a := 0;
+	var b := 1;
+	if x < 2 then return x; end;
+	while not (x < 2)
+	do
+		var A := a;
+		var B := b;
+		a := B;
+		b := A-(0-B);
+		x := x-1;
+	end;
+	return b;
+end;

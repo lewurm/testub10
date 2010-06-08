@@ -1,0 +1,25 @@
+long f1(long, long*);
+long f2(long, long*);
+long f3(long, long*);
+long f4(long, long*);
+long f5(long, long*);
+long f6(long, long*);
+long f7(long, long*);
+long f8(long, long*);
+
+long muh[] = {6,4};
+long kuh[] = {1,0};
+long zod[] = {0,1};
+long pui[] = {1,1};
+
+printf("%d = %d , %d = %d, %d = %d, %d = %d \n", f8(5,muh) ,  1 ,  f8(4,muh) ,  1 ,  f8(0,muh) ,  0 ,  f8(0,zod) ,  0 );
+
+RET(f1(5,muh) == 0 && f1(4,muh) == 1 &&
+	f2(5,kuh) == 0 && f2(5,zod) == 1 &&
+	f3(5,kuh) == 1 && f3(5,zod) == 0 && f3(5,muh) == 1 &&
+	f4(5,kuh) == 1 && f4(5,zod) == 0 && f4(5,muh) == 0 &&
+	f5(5,kuh) == 0 && f5(5,zod) == 1 &&
+	f6(5,muh) == 1 && f6(5,kuh) == 1 && f6(5,pui) == 0 &&
+	f7(5,muh) == 1 && f7(5,kuh) == 0 && f7(5,pui) == 1 && 
+	f8(5,muh) == 0 && f8(4,muh) == 0 && f8(0,muh) == 1 && f8(0,zod) == 1 
+   );

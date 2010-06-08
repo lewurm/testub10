@@ -1,0 +1,11 @@
+method foo(a b c)
+	return a;
+end;
+
+method bar(a b c)
+	return b;
+end;
+
+method foobar(a b c)
+	return c;
+end;

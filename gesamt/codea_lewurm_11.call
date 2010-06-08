@@ -1,0 +1,46 @@
+#define TRIES 3
+
+/* ugly. copied from 'bits/mman.h' */
+#define PROT_READ	0x1
+#define PROT_WRITE	0x2
+#define MAP_PRIVATE	0x02
+#define MAP_FIXED	0x10
+#define MAP_ANONYMOUS	0x20
+
+void *mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset);
+
+long try0(long);
+long try1(long);
+long try2(long);
+
+/* try these adresses until one is free */
+long *tries[TRIES] = {
+	(long *)0x00100000,
+	(long *)0x01000000,
+	(long *)0xA0000000
+};
+
+int   t    = 0;
+long *addr = NULL;
+
+for (t = 0; t < TRIES; t++) {
+	addr = mmap(tries[t], 4096, PROT_READ | PROT_WRITE,
+	            MAP_PRIVATE | MAP_ANONYMOUS | MAP_FIXED, -1, 0);
+
+	if (tries[t] == addr)
+		break;
+}
+
+if ((void *)-1 == addr) {
+	puts("unable to map memory");
+	RET(1); /* keep the statistic clean */
+}
+
+addr[2] = 1337;
+
+switch (t) {
+case 0:	RET(try0(0xcafebabe) == 1337);
+case 1:	RET(try1(0xcafebabe) == 1337);
+case 2:	RET(try2(0xcafebabe) == 1337);
+}
+

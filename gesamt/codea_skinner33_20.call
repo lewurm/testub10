@@ -1,0 +1,5 @@
+long f1(long, long);
+long f2(long, long);
+long f3(long, long);
+
+RET(f1(5,3) == 2 && f2(8,3) == 8 && f3(4,2) == 3);

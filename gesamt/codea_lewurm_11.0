@@ -1,0 +1,13 @@
+struct a b c end;
+
+method try0()
+	return 0x00100000.c;
+end;
+
+method try1()
+	return 0x01000000.c;
+end;
+
+method try2()
+	return 0xA0000000.c;
+end;

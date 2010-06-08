@@ -1,0 +1,3 @@
+long s[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+extern long fib(long *,long);
+RET(fib(s,-1)==-1 && fib(s,0)==0 && fib(s,1)==1 && fib(s,2)==1 && fib(s,3)==2 && fib(s,7)+fib(s,8)==fib(s,9));

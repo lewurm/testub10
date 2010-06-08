@@ -1,0 +1,24 @@
+
+struct a b end;
+
+method foo()
+	var x := 5;
+	if this * x then
+		return (x - this) * x;
+	end;
+	return x;
+end;
+
+method bar(n)
+	var x := n;
+	this.a := x;
+	return x;
+end;
+
+method bla(m n)
+	if not((m-n) < (m*n)) then
+		return m;
+	else
+		return n;
+	end; 
+end;

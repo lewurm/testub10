@@ -1,0 +1,7 @@
+extern long long m(long long *this, long long s);
+
+long long ar[] = { 1, 2, 3, 4};
+long long ar2[] = { -7, 4711, 3, 4};
+
+RET(m(ar, 3) == 60 && ar[0] == 10 && ar[1] == 20 && ar[2] == 30 && ar[3] == 4
+&& m(ar2, 2) == 745 && ar2[0] == -70 && ar2[1] == 815 && ar2[2] == 3);

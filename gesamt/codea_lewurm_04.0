@@ -1,0 +1,3 @@
+method f()
+  return 666-this;
+end;

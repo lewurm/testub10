@@ -1,0 +1,13 @@
+method a()
+       var u := 3;
+       var v := this;
+       return u - (v - 10);
+end;
+
+method b()
+       var u := 10;
+       var v := u;
+       return (u - (-1 * v));
+end;
+
+

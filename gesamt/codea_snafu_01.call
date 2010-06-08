@@ -1,0 +1,5 @@
+extern long a(long this);
+extern long b(long this, long x);
+extern long c(long this, long x);
+
+RET( (a(0xDEAD) == 2) && (b(0xDEAD, 23) == -18) && (c(0xDEAD, 23) == 20));

@@ -1,0 +1,8 @@
+method m()
+	if 5 < 10 then
+		return 10;
+	else
+		return 5;
+	end;
+end;
+

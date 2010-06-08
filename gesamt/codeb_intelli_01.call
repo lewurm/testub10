@@ -1,0 +1,5 @@
+extern long s(long *this, long*, long);
+
+long ar[] = {111, 222, 333};
+
+RET(s(ar, ar, 5) == ((ar[1] * ar[0]) - (5 * -2)) * ((ar[1] * ar[0]) - (5 * -2)));

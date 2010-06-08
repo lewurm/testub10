@@ -1,0 +1,13 @@
+extern long long f(long long*, long long*, long long);
+extern long long g(long long*, long long*);
+
+
+long long ar[10];
+long long ar2[10];
+int i = 1;
+for(; i <= 10; i++)
+	ar[i-1] = i;
+for (i = 1; i <= 10; i++)
+	ar2[i-1] = i * 10;
+
+RET(f(ar, ar, 4711) == 4711 && g(ar, ar2) == 20);

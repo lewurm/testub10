@@ -1,0 +1,10 @@
+
+long foo(long);
+long bar(long*, long);
+long bla(long, long, long);
+
+long muh[] = {1, 3};
+long kuh[] = {2,6};
+
+RET(foo(1) == 20 && foo(0) == 5 && bar(muh, 5) == 5 && muh[0] == 5 && bar(muh,10) == 10 && muh[0] == 10 && bla(0xDEAF, 10,1) == 1 && bla(0xABC, 10,-1) == 10 ); 
+

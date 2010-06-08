@@ -1,0 +1,8 @@
+struct x y z end;
+
+method b(a)
+       a.x := 3;
+       a.y := 2;
+       a.z := (a.x * a.y) - 10;
+       return a;
+end;

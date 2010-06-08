@@ -1,0 +1,52 @@
+
+struct a b end;
+
+method foo(n)
+	if 0 then
+		return 0;
+	end;
+	a := b;	
+	if not(not(a = b)) then
+		return n - (a*b);
+	end;
+	return 0x9999;
+end;
+
+method bar(n)
+	var x := not(5 < (n*2));
+	if x then
+		return n - (2*n);
+	else
+		x := 3 * (4 * n);
+		return x;
+	end;
+end;
+
+method bla(n)
+	if not(not(2 * ( 5 * (n or n)))) then
+		return 1;
+	else
+		return 0;
+	end;
+end;
+
+method blubb(n)
+	if not((n*n) < 20) then
+		return 20;
+	else
+		if not(not(n)) then
+			return 10;
+		else
+			return 5;
+		end;
+	end;
+end;
+
+struct q r s t end;
+
+method miau(n m)
+	r := 5 * ((n-m) * 3);
+	s := 7 * (q * 5);
+	t := 40000000 * (4 * q);
+	return 0;
+end;

@@ -1,0 +1,7 @@
+long f(long, long, long);
+
+RET(f(0, 0x00, 0x00) == 1 &&
+    f(0, 0x0A, 0xFF) == 0 &&
+    f(0, 0xFF, 0x50) == 0 &&
+    f(0, 0x0A, 0x50) == 1);
+

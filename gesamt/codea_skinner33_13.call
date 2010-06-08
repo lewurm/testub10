@@ -1,0 +1,27 @@
+#define F1(a,b)     (((long)(a) - (long)(b)) - (-3UL * ((long)(b) - (long)(a))))
+#define F2(a,b)     (((long)(a) - (long)(b)) - (-2UL  * ((long)(b) - (long)(a))))
+
+long f1(long, long, long);
+long f2(long, long, long);
+
+RET(f1(0,    3,  20) == F1(   3,  20) &&
+    f1(0, -100,  80) == F1(-100,  80) &&
+    f1(0,   50,  -9) == F1(  50,  -9) &&
+    f1(0,  -77, -50) == F1( -77, -50) &&
+
+    f2(0,    3,  20) == F2(   3,  20) &&
+    f2(0, -100,  80) == F2(-100,  80) &&
+    f2(0,   50,  -9) == F2(  50,  -9) &&
+    f2(0,  -77, -50) == F2( -77, -50) &&
+
+    f1(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F1(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F2(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+
+    f1(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F1(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F2(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) 
+   );
+

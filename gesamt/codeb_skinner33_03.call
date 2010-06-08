@@ -1,0 +1,13 @@
+
+long foo(long*, long);
+long bar(long, long, long);
+long bla(long*);
+long blub(long*);
+long miau(long*, long);
+long null(long*, long);
+
+long muh[] = {4}, kuh[] = {0};
+
+
+RET(foo(muh,5) == 1 && foo(muh, 2) == -2 && foo(muh,0) == -4 && bar(5,5,2) == 1&& bar(3,5,2) == 2 && bar(3,3, 0) == 4 && bla(muh) == 1 && bla(kuh) == 2 && blub(muh) == 1 && blub(kuh) == 2 && miau(muh, 3) == 2 && miau(muh,4) == 1 && null(muh,3) == 2 && null(muh,4) == 4 );
+

@@ -1,0 +1,11 @@
+method f1(a)
+	return this - (a - 0);
+end;
+
+method f2(a)
+	return (this - a) - (0 - a);
+end;
+
+method f3(a)
+	return 5 - (a - 0);
+end;

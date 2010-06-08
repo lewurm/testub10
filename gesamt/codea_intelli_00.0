@@ -1,0 +1,8 @@
+method f(a b c)
+	return (a*5) - (b*c) - this;
+end;
+
+/*verschachtelte mult*/
+method g(a b)
+       return (a * (b * (-4))) - this;
+end;

@@ -1,0 +1,6 @@
+struct a end;
+
+method f()
+	this.a := this.a;
+	return this.a;
+end;

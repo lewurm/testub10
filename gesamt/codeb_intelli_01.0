@@ -1,0 +1,6 @@
+struct goo gaa gee end;
+
+method s(x y)
+	var foobar := (this.gaa * x.goo) - (y * -2);
+	return foobar * foobar;
+end;

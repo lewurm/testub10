@@ -1,0 +1,27 @@
+struct bar end;
+
+method foo(bar)
+	while not(0 = bar) do
+		bar := (bar - 1);
+		this.bar := (this.bar * 2);
+	end;
+	return this.bar;
+end;
+
+method bar(x)
+	while 1 do
+		x := x - (-1);
+		if not(x = 10) then
+			x := x * 1;
+		else
+			return x;
+		end;
+	end;
+end;
+
+method blu(a)
+	while 0 do
+		return 3;
+	end;
+	return 4;
+end;

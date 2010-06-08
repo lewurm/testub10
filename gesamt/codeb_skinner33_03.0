@@ -1,0 +1,77 @@
+struct a end;
+
+method foo(b)
+	if 0 * b then
+		return b;
+	else
+		return (b - a);
+	end;
+end;
+
+method bar(b c)
+	if b - b then
+		return 3;
+	else
+		if b - this then
+			return 2;
+		else
+			if b * 0 then
+				return 3;
+			else
+				if c * 1 then
+					return 1;
+				else
+					return 4;
+				end;
+			end;
+		end;
+	end;
+end;
+
+method bla()
+	if a * 0 then
+		return 3;
+	else
+		if a * 1 then
+			return 1;
+		else
+			return 2;
+		end;
+	end;
+end;
+
+method blub()
+	if 0 * a then
+		return 3;
+	else
+		if 1 * a then
+			return 1;
+		else
+			return 2;
+		end;
+	end;
+end;
+
+method miau(n)
+	if 0 * (a - n) then
+		return 3;
+	else
+		if 1 * (a -n) then
+			return 2;
+		else
+			return (n-(a-1));
+		end;
+	end;
+end;
+
+method null(n)
+	if (a - n) * 0 then
+		return 3;
+	else
+		if (a -n) * 1 then
+			return 2;
+		else
+			return (a - (n<a));
+		end;
+	end;
+end;

@@ -1,0 +1,5 @@
+extern long a(long long this);
+extern long b(long long this);
+
+
+RET(a(20) == -7 && b(0xDEAD) == 20);

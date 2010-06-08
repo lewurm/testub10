@@ -1,0 +1,8 @@
+struct
+	u v w x y z
+end;
+
+method f(a)
+	return (a - (-8 * 4) ).v;
+end;
+

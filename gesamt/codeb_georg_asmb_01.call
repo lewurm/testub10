@@ -1,0 +1,25 @@
+/* BOF georg_asmb_00.call */
+#include <string.h> /* strcmp() strlen() */
+char x[] = "UVWxyz6789abcDEFUVWxyz6789abcDEFUVWxyz6789abcDE\0UVWxyz6789abcDEFUVWxyz6789abcDEF";
+char y[] = "UVWxyz6789abcDEFUVWxyz6789abcDEFUVWxyz6789abcDE\0UVWxyz6789abcDEFUVWxyz6789abcDEF";
+char z[] = "UVWxyz6789abcDEFuvwxyz6789abcdefuvwxyz6789abcde\0UVWxyz6789abcDEFUVWxyz6789abcDEF";
+char *p = &y[16];
+extern char *asmb(char *);
+int ret = (asmb(p)==p && (strcmp(y,z)==0));
+if (ret != 1) {
+	x[sizeof(x)-1] = '\0'; /* just 2b sure */
+	y[sizeof(y)-1] = '\0'; /* just 2b sure */
+	z[sizeof(z)-1] = '\0'; /* just 2b sure */
+	x[sizeof(x)-2] = '\0'; /* just 2b sure */
+	y[sizeof(y)-2] = '\0'; /* just 2b sure */
+	z[sizeof(z)-2] = '\0'; /* just 2b sure */
+	x[strlen(x)] = '#';
+	y[strlen(y)] = '#';
+	z[strlen(z)] = '#';
+	fprintf(stderr, "### %s:%d:%s() x '%s'\n", __FILE__, __LINE__, __FUNCTION__, x);
+	fprintf(stderr, "### %s:%d:%s() y '%s'\n", __FILE__, __LINE__, __FUNCTION__, y);
+	fprintf(stderr, "### %s:%d:%s() z '%s'\n", __FILE__, __LINE__, __FUNCTION__, z);
+}
+RET(ret);
+/* vim: set filetype=c: */
+/* EOF georg_asmb_00.call */

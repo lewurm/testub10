@@ -1,0 +1,16 @@
+struct f1 end;
+
+method foo ( )
+    
+    var v1 := 1;
+
+    /* Bei einem Variablen/Feldzugriff muss eine Variable oder ein Feld mit dem Namen sichtbar sein */
+    f1 := f1;
+    v1 := v1;
+
+    /* Bei einem Feldzugriff muss ein Feld mit dem Namen sichtbar sein */
+    this.f1 := this.f1;
+    this.v1 := this.v1;
+
+    return v1;
+end;

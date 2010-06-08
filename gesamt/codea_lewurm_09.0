@@ -1,0 +1,12 @@
+struct j k l end;
+method w()
+	return this.k;
+end;
+
+method x()
+	return l;
+end;
+
+method y()
+	return (this-8).k;
+end;

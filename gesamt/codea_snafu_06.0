@@ -1,0 +1,21 @@
+struct a b end;
+
+method test64()
+	return this - -2139062144;
+end;
+
+method num()
+	return 15 - 4 - 2 - 6 - 7;
+end;
+
+method num2()
+	return 15 - (4 - 2 - 6 - 7);
+end;
+
+method globcmp()
+	return this.a < this.b;
+end;
+
+method globcmp2()
+	return this.a = this.b;
+end;

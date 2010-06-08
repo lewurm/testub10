@@ -1,0 +1,8 @@
+
+long foo(long*, long);
+long bar(long, long);
+long blu(long, long);
+
+long inp[] = {2};
+
+RET(foo(inp, 4) == 32 && blu(1337,42) == 4 && bar(0xDEAD,4) == 10 && bar(0x1337, 9) == 10);

@@ -1,0 +1,6 @@
+extern long a(long long *this);
+
+
+long long ar[3] = { 2, 4, 8 };
+
+RET(a(ar) == 815 && ar[0] == 815);

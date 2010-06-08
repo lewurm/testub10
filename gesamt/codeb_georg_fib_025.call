@@ -1,0 +1,2 @@
+extern long fib(long,long);
+RET(fib(0,-1)==-1 && fib(0,0)==0 && fib(0,1)==1 && fib(0,2)==1 && fib(0,3)==2 && fib(0,7)+fib(0,8)==fib(0,9));

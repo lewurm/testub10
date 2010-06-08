@@ -1,0 +1,4 @@
+long f(long, long, long);
+
+RET(f(1, 8, 16) == 17);
+

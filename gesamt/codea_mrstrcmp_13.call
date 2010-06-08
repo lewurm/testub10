@@ -1,0 +1,55 @@
+#define F1(a,b)     ((long)(a) - (-1UL * (long)(b)))
+#define F2(a,b)     ((long)(a) - (-2UL * (long)(b)))
+#define F4(a,b)     ((long)(a) - (-4UL * (long)(b)))
+#define F8(a,b)     ((long)(a) - (-8UL * (long)(b)))
+#define  F(a,b,c,d) ((long)(a) - (-8UL * ((long)(b) - (-4UL * ((long)(c) - (-2UL * (long)(d)))))))
+
+long f1(long, long, long);
+long f2(long, long, long);
+long f4(long, long, long);
+long f8(long, long, long);
+long  f(long, long, long, long, long);
+
+RET(f1(0,    3,  20) == F1(   3,  20) &&
+    f1(0, -100,  80) == F1(-100,  80) &&
+    f1(0,   50,  -9) == F1(  50,  -9) &&
+    f1(0,  -77, -50) == F1( -77, -50) &&
+
+    f2(0,    3,  20) == F2(   3,  20) &&
+    f2(0, -100,  80) == F2(-100,  80) &&
+    f2(0,   50,  -9) == F2(  50,  -9) &&
+    f2(0,  -77, -50) == F2( -77, -50) &&
+
+    f4(0,    3,  20) == F4(   3,  20) &&
+    f4(0, -100,  80) == F4(-100,  80) &&
+    f4(0,   50,  -9) == F4(  50,  -9) &&
+    f4(0,  -77, -50) == F4( -77, -50) &&
+
+    f8(0,    3,  20) == F8(   3,  20) &&
+    f8(0, -100,  80) == F8(-100,  80) &&
+    f8(0,   50,  -9) == F8(  50,  -9) &&
+    f8(0,  -77, -50) == F8( -77, -50) &&
+
+     f(0,  10,  20,  30,  40) == F( 10,  20,  30,  40) &&
+     f(0, -10,  20, -30,  40) == F(-10,  20, -30,  40) &&
+     f(0,  10, -20,  30, -40) == F( 10, -20,  30, -40) &&
+     f(0, -10, -20, -30, -40) == F(-10, -20, -30, -40) &&
+
+    f1(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F1(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F2(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f4(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F4(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+    f8(0, 0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) ==
+       F8(0x7FFFFFFFFFFFFFFFUL, 0x7FFFFFFFFFFFFFFFUL) &&
+
+    f1(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F1(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f2(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F2(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f4(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F4(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) &&
+    f8(0, 0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL) ==
+       F8(0x8FFFFFFFFFFFFFFFUL, 0x8FFFFFFFFFFFFFFFUL));
+

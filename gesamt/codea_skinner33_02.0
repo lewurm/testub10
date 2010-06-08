@@ -1,0 +1,11 @@
+method w(a)
+	return not a;
+end;
+
+method x(a)
+	return not (not a);
+end;
+
+method y(a)
+	return not (not (not a));
+end;

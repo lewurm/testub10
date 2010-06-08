@@ -1,0 +1,32 @@
+struct x end;
+
+method m1(size)
+        var x:= size - (-10);
+        x := (x * 0) - 20;
+        var i:= 0;
+        while not (i = size) do
+                if i < 1 then
+                        (this - (i * -8)).x := (this - (i * -8)).x - (-20);
+                else
+					(this - (i * -8)).x := (this - ((i - 1) * -8)).x or 128;
+				end;
+				i := i - -1;
+        end;
+        return x;
+end;
+
+method m2(y)
+        if 100 < y then
+			return 0;
+		end;
+		var x := -10;
+		while x < y do
+			x := x * -2;
+		end;
+		if y < 0 then
+			return -1 * x;
+		else
+			return 1 * x;
+		end;
+end;
+

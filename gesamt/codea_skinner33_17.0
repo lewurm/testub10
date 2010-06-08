@@ -1,0 +1,45 @@
+struct foo bar end;
+
+method f1(a)
+	return 5 * a.foo;
+end;
+
+method f2(a)
+	return a.bar * this;
+end;
+
+method f3(a)
+	return (a.foo-3) < (a.bar-3);
+end;
+
+method f4(a)
+	return (a.foo*1) < 6;
+end;
+
+method f5(a)
+	return 5 < (a.bar * 1);
+end;
+
+method f6(a)
+	return (1 * a.foo) < this;
+end;
+
+method f7(a)
+	return a.foo < (a.bar * 1);
+end;
+
+method f8(a)
+	return a.foo < this;
+end;
+
+method f9(a)
+	return this < a.bar;
+end;
+
+method f10(a)
+	return a.foo < 6;
+end;
+
+method f11(a)
+	return 5 < a.bar;
+end;

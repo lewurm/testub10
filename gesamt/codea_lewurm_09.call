@@ -1,0 +1,6 @@
+long w(long);
+long x(long);
+long y(long);
+
+long t[3] = {5,6,7};
+RET(w((long)t)==6 && x((long)t)==7 && y((long)t)==5);

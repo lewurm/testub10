@@ -1,0 +1,4 @@
+long f(long, long, long);
+
+RET(f(0, 0x00, 0x00) == 0x5A);
+

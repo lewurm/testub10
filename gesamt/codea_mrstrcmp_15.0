@@ -1,0 +1,3 @@
+method f(a b)
+	return (a or 0x0A) or (0x50 or b);
+end;

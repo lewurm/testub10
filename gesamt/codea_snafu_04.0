@@ -1,0 +1,15 @@
+method pvs1(a b)
+	return (this - a) * b;
+end;
+
+method pvs2(a b)
+	return this - (a * b);
+end;
+
+method pvs3(a b)
+	return (this * a) - b;
+end;
+
+method pvs4(a b)
+	return this * (a - b);
+end;

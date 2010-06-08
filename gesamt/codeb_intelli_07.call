@@ -1,0 +1,5 @@
+extern long long m(long long *this, long long x);
+
+long long ar[3] = { 2, 4, 8 };
+
+RET(m(ar, 12) == 188 && ar[0] == 1 && ar[1] == 4 && ar[2] == 8);

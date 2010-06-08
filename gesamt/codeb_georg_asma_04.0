@@ -1,0 +1,41 @@
+/** asma - aka tolower() first 16 bytes.
+ *
+ *	unsigned char *asma(unsigned char *s)
+ *	{
+ *		int i;
+ *		for (i=0; i<16; i++)
+ *		{
+ *			unsigned char c = s[i];
+ *			c += (c >= 'A' && c <= 'Z') ? 'a'-'A' : 0;
+ *			s[i] = c;
+ *		}
+ *		return s;
+ *	}
+ */
+/* AMD64 Little Endian byte order
+ * p[0]                c0 c1 c2 c3 c4 c5 c6 c7
+ * p[1]                   c1 c2 c3 c4 c5 c6 c7 c8
+ * p[1] * 256          00 c1 c2 c3 c4 c5 c6 c7
+ * p[0] - 256 * p[1]   c0
+ */
+/* WISHLIST signed!? */
+struct f end;
+method asma()
+	var p := this;
+	var q := this--16;
+	while p < q
+	do
+		var c := p.f - (256 * (p--1).f);
+
+		/* add 'a'-'A' iff 'A' <= c <= 'Z' */
+		if 0x40 < c then if c < 0x5B then
+			c := c--0x20;
+		end;
+		end;
+
+		p.f := (256 * (p--1).f)-(0-c);
+
+		p := p--1;
+	end;
+	return this;
+end;

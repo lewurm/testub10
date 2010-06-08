@@ -1,0 +1,17 @@
+struct x y z end;
+
+method a()
+       var u := this.x;
+       var v := 4711;
+       u := u * this.y;
+       v := u - (0 - v);
+       return u - v;
+end;
+
+method b(a)
+       var u := 10;
+       u := a.z;
+       return u * 2;
+end;
+
+
