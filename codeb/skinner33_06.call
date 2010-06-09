@@ -1,0 +1,6 @@
+
+long f(long*);
+
+long a[] = {1};
+
+RET(f(a) == 1);
