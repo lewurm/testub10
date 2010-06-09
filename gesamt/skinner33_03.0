@@ -1,0 +1,30 @@
+struct a end;
+
+method m1()
+	var x := 5;
+
+	return x - g();
+
+	return x;
+end;
+
+method m2()
+	var x := 5;
+
+	return g() - x;
+
+	return x;
+end;
+
+method m3()
+	var n := in();
+	return 3;
+end;
+
+method in()
+	a := a - (-1);
+end;
+
+method g()
+	return 2;
+end;

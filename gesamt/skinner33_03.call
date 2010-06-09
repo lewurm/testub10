@@ -1,0 +1,10 @@
+long m1(long);
+long m2(long);
+long m3(long*);
+
+long a[] = {1};
+long ret;
+
+ret = m3(a);
+
+RET(m1(42) == 3 && m2(42) == -3 && 3 == ret && 2 == a[0]);
