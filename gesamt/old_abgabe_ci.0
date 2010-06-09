@@ -1,0 +1,9 @@
+method fib(n)
+  if 1<n then
+    var f1 := fib(n-1);
+    var f2 := fib(n-2);
+    return f1-(-1*f2);
+  else
+    return n;
+  end;
+end;

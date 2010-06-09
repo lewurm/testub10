@@ -1,0 +1,7 @@
+method fib(n)
+if 1<n then
+  return fib(n-2)-(-1*fib(n-1));
+else
+  return n;
+end;
+end;

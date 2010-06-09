@@ -1,0 +1,3 @@
+method f()
+  return labs(); /* aus der C-Library, erster parameter ist this!*/
+end;

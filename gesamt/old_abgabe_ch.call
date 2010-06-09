@@ -1,0 +1,2 @@
+extern long tarai(long,long,long,long);
+RET(3 == tarai(42,2,1,3));

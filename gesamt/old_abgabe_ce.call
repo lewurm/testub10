@@ -1,0 +1,2 @@
+extern long fib(long,long);
+RET(2==fib(42,3));

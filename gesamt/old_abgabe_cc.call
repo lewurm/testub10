@@ -1,0 +1,10 @@
+#define DEFINE_G
+
+extern long f(long,long);
+
+
+printf("f(%d,%d) == %d, sollte %d\n",5,3,f(5,3),73);
+
+RET(f(5,3)==73);
+
+

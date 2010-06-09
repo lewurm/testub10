@@ -1,0 +1,13 @@
+method f(x)
+  return (x-1).g(this-(-1));
+end;
+/*
+#C-Funktion:
+#long g(long x, long y)
+#{
+#  return h(x*2, y*3)+1;
+#}
+*/
+method h(x)
+  return x*this;
+end;

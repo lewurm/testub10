@@ -1,0 +1,11 @@
+method f(x y)
+  return mymin(y,x);
+end;
+
+method mymin(x y)
+ if y<x then
+   return y;
+ else
+   return x;
+ end;
+end;

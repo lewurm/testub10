@@ -1,0 +1,3 @@
+extern long f(long,long,long);
+
+RET(f(42,5,3)==3 && f(42,-3,5)==-3);
