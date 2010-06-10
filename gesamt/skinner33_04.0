@@ -1,8 +1,8 @@
 struct a end;
 
-method m(u v w x y)
+method m(u v w)
 	var a := 5;
-	var c := 5 -(b(u,v,w,x,y) * 5);
+	var c := 5 -(b(u,v,w,v,u) * 5);
 	var d := n(v);
 	return a;
 end;
@@ -14,5 +14,6 @@ end;
 
 method b(u v w x y)
 	a := a - (-1);
+	n(v);
 	return 2;
 end;
