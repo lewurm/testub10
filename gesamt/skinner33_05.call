@@ -1,0 +1,9 @@
+long m1(long*);
+long m2(long*);
+
+long a1[] = {3,6}, a2[] = {4,8};
+
+long ret1 = m1(a1);
+long ret2 = m2(a2);
+
+RET(7 == ret1 && 7 == a1[1] && 12 == ret2 && 5 == a2[0]);

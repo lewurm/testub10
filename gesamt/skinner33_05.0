@@ -1,0 +1,20 @@
+struct a b end;
+
+method m1()
+	return (this.a).inc1(this);
+end;
+
+method inc1(x)
+	x.b := x.b - (-1);
+	return this - (-4);
+end;
+
+method m2()
+	return (this - (-8)).inc2(this);
+end;
+
+method inc2(x)
+	x.a := x.a - (-1);
+	return this.a - (-4);
+end;
+
