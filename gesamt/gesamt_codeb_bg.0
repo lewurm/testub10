@@ -1,0 +1,10 @@
+struct next end;
+
+method length()
+  var l:=this;
+  var len:=0;
+  if l then
+	len := (l.next).length() - -1;
+  end;
+  return len;
+end;
