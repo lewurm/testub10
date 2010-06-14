@@ -90,8 +90,15 @@ for i in $TEST/*.0; do
 	fi
 
 	if [ $ni -gt $ti ]; then
-		#red
-		bcolor="\033[01;31m"
+		# cnt = ti * 1.2 and rounded
+		cnt=`echo $ti*1.2 | bc -l | xargs printf "%1.0f"`
+		if [ $ni -gt $cnt ]; then
+			#dark red
+			bcolor="\033[00;31m"
+		else
+			#red
+			bcolor="\033[01;31m"
+		fi
 	else
 		if [ $ni -eq $ti ]; then
 			#gray
