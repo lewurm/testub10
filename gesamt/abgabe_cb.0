@@ -1,0 +1,3 @@
+method f(x)
+  return x.labs();
+end;

@@ -1,0 +1,7 @@
+method f()
+  if this<2 then
+    return this;
+  else
+    return (this-2).f()-(0-(this-1).f());
+  end;
+end;

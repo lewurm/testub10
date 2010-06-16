@@ -1,0 +1,4 @@
+struct list {long val; struct list *next; };
+extern struct list *ns(long n);
+struct list *l=ns(2);
+RET(l->val==2 && l->next->val==1 && l->next->next->val==0 && l->next->next->next==NULL);

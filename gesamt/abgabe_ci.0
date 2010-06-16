@@ -1,0 +1,6 @@
+method t(y z)
+  if not(y<this) then
+    return z;
+  end;
+  return (this-1).t(y,z).t((y-1).t(z,this), (z-1).t(this,y));
+end;

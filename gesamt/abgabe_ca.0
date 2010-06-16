@@ -1,0 +1,3 @@
+method f()
+  return labs();
+end;

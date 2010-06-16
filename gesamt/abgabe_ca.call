@@ -1,0 +1,2 @@
+extern long f(long);
+RET(f(7)==7 && f(-8)==8);

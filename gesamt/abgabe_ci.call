@@ -1,0 +1,2 @@
+extern long t(long,long,long);
+RET(2 == t(3,2,1));

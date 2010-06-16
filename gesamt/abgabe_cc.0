@@ -1,0 +1,12 @@
+method f(x)
+  return mymax(x);
+end;
+
+method mymax(x)
+  if this<x then
+    return x;
+  else
+    return this;
+  end;
+end;
+  

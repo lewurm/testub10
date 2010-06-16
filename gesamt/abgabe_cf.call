@@ -1,0 +1,8 @@
+struct tree { long val; struct tree *l; struct tree *r; };
+extern struct tree *insert(struct tree *,long);
+struct tree *t=NULL;
+t=insert(t,5);
+t=insert(t,3);
+t=insert(t,7);
+t=insert(t,4);
+RET(t->val==5 && t->l->val==3 && t->r->val==7 && t->l->r->val==4);

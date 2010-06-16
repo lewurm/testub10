@@ -1,0 +1,14 @@
+struct v next end;
+
+method ns()
+  if this<0 then
+    return 0;
+  end;
+  return malloc(16).ns1(this);
+end;
+
+method ns1(n)
+  v:=n;
+  next:=(n-1).ns();
+  return this;
+end;

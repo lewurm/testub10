@@ -1,0 +1,15 @@
+method f(x)
+  return ((x*2)-1).g(0-this);
+end;
+
+/* C-Funktion:
+
+long g(long x, long y)
+{
+   return h(x+5,y/2)+3;
+}
+*/
+
+method h(x)
+  return x-this;
+end;

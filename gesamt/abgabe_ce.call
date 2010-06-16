@@ -1,0 +1,3 @@
+#define DEFINE_G
+extern long f(long,long);
+RET(f(5,-7)==11);

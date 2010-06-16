@@ -1,0 +1,2 @@
+extern long a(long,long);
+RET(3==a(1,1));

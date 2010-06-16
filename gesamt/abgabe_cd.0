@@ -1,0 +1,11 @@
+method f(x)
+  return x.mymax(this);
+end;
+
+method mymax(x)
+  if this<x then
+    return x;
+  else
+    return this;
+  end;
+end;

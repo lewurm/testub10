@@ -1,0 +1,20 @@
+struct v left right end;
+
+method insert(x)
+  if this then
+    if x<v then
+      left  := left.insert(x);
+    else
+      right := right.insert(x);
+    end;
+    return this;
+  else
+    return malloc(24).init(x);
+  end;
+end;
+
+method init(x)
+  v:=x;
+  left:=0;
+  right:=0;
+end;
