@@ -3,9 +3,10 @@ method f(x)
 end;
 /*
 #C-Funktion:
+#wird jedes jahr geaendert!!
 #long g(long x, long y)
 #{
-#  return h(x*2, y*3)+1;
+#  return h(x+5, y/2)+3;
 #}
 */
 method h(x)
