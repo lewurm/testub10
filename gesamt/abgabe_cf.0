@@ -17,4 +17,5 @@ method init(x)
   v:=x;
   left:=0;
   right:=0;
+  return this;
 end;
