@@ -4,7 +4,7 @@ method ns()
   if this<0 then
     return 0;
   end;
-  return malloc(16).ns1(this);
+  return 16.malloc().ns1(this);
 end;
 
 method ns1(n)

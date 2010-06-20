@@ -9,7 +9,7 @@ method insert(x)
     end;
     return this;
   else
-    return malloc(24).init(x);
+    return 24.malloc().init(x);
   end;
 end;
 
