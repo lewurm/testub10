@@ -46,15 +46,22 @@ for i in $TEST/*.0; do
     # generate .s file and ignore output on stderr
     ./$1 < $i > $TMPNAME.s 2> /dev/null
     # create executable
-    gcc -DCALL=\"${i%.0}.call\" -o $TMPNAME $TMPNAME.s $TESTMAIN $CALLCONV
+    gcc -static -DCALL=\"${i%.0}.call\" -o $TMPNAME $TMPNAME.s $TESTMAIN $CALLCONV
     
     
     # extract the exported symbols from the .s file
     #LABEL=`grep '.globl' $TMPNAME.s | sed 's/^.*\\.globl *\\([a-zA-Z0-9_]\\+\\).*$/\1/g'`
 
-    # this won't work, we need all actual labels
-     grep '[a-zA-Z0-9_.$]\+:' $TMPNAME.s | sed 's/^\(.*[^a-zA-Z0-9_.$]\)\?\([a-zA-Z0-9_.$]\+\):.*$/\2/g' > $TMPNAME.uniq
+	 # funktionsnamen der funktionen die gecall't werden (z.b. library
+	 # funktionen wie malloc)
+	 grep 'call ' $TMPNAME.s | sed 's/call //g;s/ //g;s/\t//g' > $TMPNAME.uniq
 
+    # this won't work, we need all actual labels
+     grep '[a-zA-Z0-9_.$]\+:' $TMPNAME.s | sed 's/^\(.*[^a-zA-Z0-9_.$]\)\?\([a-zA-Z0-9_.$]\+\):.*$/\2/g' >> $TMPNAME.uniq
+
+	 cat $TMPNAME.uniq | sort | uniq  > $TMPNAME.tmp123
+	 cat $TMPNAME.tmp123 > $TMPNAME.uniq
+	 rm $TMPNAME.tmp123
      LABEL_ASM=`cat $TMPNAME.uniq`
 
      # functionidentifiers from CALL-file
